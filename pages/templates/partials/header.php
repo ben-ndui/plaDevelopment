@@ -1,10 +1,13 @@
 <?php
 
+    $app = App::getInstance();
 
+    $apparence = $app->getTable('Site')->find(1);
 
 ?>
 
-<header class="header">
+<header class="my-header">
+    <img src="<?= $apparence->imgURL_home_page;?>">
     <nav class="header-nav-bar">
         <div class="header-nav-bar-humburger">
             <div class="humburger-bar humburger-bar-first"></div>
@@ -34,7 +37,7 @@
     <div class="logo"></div>
 
     <div class="logo-and-title">
-        <h1>
+        <h1 class="link">
             LA <span class="surbrillance">PERFORMANCE</span>
             PAR <span class="surbrillance">L'EFFICACITE</span> DES <span class="surbrillance">PROCESSUS</span>
         </h1>

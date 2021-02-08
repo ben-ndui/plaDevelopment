@@ -84,50 +84,50 @@ only screen and (hover: none) {
         text-align: justify;
     }
 
-    .header .logo-and-title {
+    .my-header .logo-and-title {
         position: absolute;
         top: 80%;
         left: 30%;
         transform: translate(-30%, -60%);
     }
 
-    .header .header-nav-bar{
+    .my-header .header-nav-bar{
         padding: 10px;
     }
-    .header .header-nav-bar .header-nav-bar-humburger{
+    .my-header .header-nav-bar .header-nav-bar-humburger{
         display: block;
     }
 
-    .header-nav-bar .menu-coulissant{
+    .my-header-nav-bar .menu-coulissant{
         transition: display 10s ease-in-out;
     }
 
-    .header .header-nav-bar:hover > .menu-coulissant{
+    .my-header .header-nav-bar:hover > .menu-coulissant{
         display: block;
         transition: display 10s ease-in-out;
     }
 
-    .header-nav-bar .menu-coulissant li{
+    .my-header-nav-bar .menu-coulissant li{
         list-style-type: none;
         padding: 5px;
         transition: all 10s ease-in-out;
     }
 
-    .header-nav-bar .menu-coulissant li:hover > a{
+    .my-header-nav-bar .menu-coulissant li:hover > a{
         border-bottom: 1px solid var(--globalOrange);
     }
 
-    .header-nav-bar .menu-coulissant li a{
+    .my-header-nav-bar .menu-coulissant li a{
         text-decoration: none;
         color: var(--text-color-theme);
     }
 
-    .header .header-nav-bar .header-nav-bar-humburger{
+    .my-header .header-nav-bar .header-nav-bar-humburger{
         opacity: 1;
         border: 1px solid var(--globalOrange);
     }
 
-    .header .header-nav-bar .header-nav-bar-humburger .humburger-bar{
+    .my-header .header-nav-bar .header-nav-bar-humburger .humburger-bar{
         background: var(--globalOrange);
     }
 

@@ -4,9 +4,12 @@
 
     $app->title = "ADMINISTRATION PLA";
 
+    $apparence = $app->getTable('Site')->find(1);
+
 ?>
 
-<header class="header header-pages">
+<header class="my-header header-pages header-admin">
+    <img src="<?= $apparence->imgURL_home_page;?>">
     <nav class="header-nav-bar">
         <div class="header-nav-bar-humburger">
             <div class="humburger-bar humburger-bar-first"></div>
@@ -32,5 +35,4 @@
             <?= $app->title ;?>
         </h1>
     </div>
-
 </header>

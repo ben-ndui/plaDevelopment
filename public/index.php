@@ -21,6 +21,8 @@ if($page === 'home'){
     require ROOT . '/pages/single.php';
 }elseif ($page === 'services'){
     require ROOT . '/pages/service.php';
+}elseif ($page === 'contact'){
+    require ROOT . '/pages/contact.php';
 }elseif ($page === 'connexion'){
     require ROOT . '/pages/users/connexion.php';
 }

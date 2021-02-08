@@ -22,11 +22,9 @@ if(!$auth->logged()){
     $app->forbidden();
 }
 
-
-
 ob_start();
 if($page === 'home'){
-    require ROOT . '/pages/admin/index_admin.php';
+    require ROOT . '/pages/admin/dashboard/dashboard.php';
 }elseif ($page === 'project.param'){//PROJECTS
     require ROOT . '/pages/admin/project/index.php';
 }elseif ($page === 'project.edit'){
@@ -57,8 +55,6 @@ if($page === 'home'){
     require ROOT . '/pages/admin/apparence/edit.php';
 }elseif ($page === 'connexion'){//CONNEXION
     require ROOT . '/pages/users/connexion.php';
-}elseif ($page === 'admin'){
-    require ROOT . '/pages/admin/project/index.php';
 }
 
 $content = ob_get_clean();

@@ -10,6 +10,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="">
         <meta name="Ben NDUI" content="">
+        <link rel="stylesheet" href="css/standart/dashboard.css">
         <link rel="stylesheet" href="css/standart/main.css">
         <link rel="stylesheet" href="css/standart/general_style.css">
         <link rel="stylesheet" href="css/standart/contact_style.css">
@@ -20,13 +21,13 @@
 
     </head>
     <body>
-    <div id="loader-wrapper">
+    <!--<div id="loader-wrapper">
         <div id="loader"></div>
 
         <div class="loader-section section-left"></div>
         <div class="loader-section section-right"></div>
 
-    </div>
+    </div>-->
         <div class="container">
 
             <?= $content; ?>
@@ -36,5 +37,6 @@
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
         <script src="js/main.js"></script>
+        <script src="js/dashboard.js"></script>
     </body>
 </html>

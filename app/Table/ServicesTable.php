@@ -45,10 +45,10 @@ class ServicesTable extends Table {
      * Récuprère un projet en liant la categorie associé
      * @return \SmoothDesign\Entity\ProjectEntity
      */
-    public function find($id){
+    public function findWithCategory($id){
 
         return $this->query("
-            SELECT services.id, services.title, services.content, services.imageURL, category.title as category
+            SELECT services.id, services.title, services.content, category.title, category.id as category
             FROM services
             LEFT JOIN category on category_id = category.id
             WHERE services.id = ?",

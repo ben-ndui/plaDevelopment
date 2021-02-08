@@ -4,14 +4,15 @@ $app = App::getInstance();
 
 $services = $app->getTable('Services')->all();
 
+$apparenceTable = $app->getTable('Site');
+$apparence = $apparenceTable->find(1);
+
 ?>
 
     <?php include 'templates/partials/header.php'; ?>
 
     <p class="text-pres text-pres-service">
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-        when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+        <?= $apparence->desc_top_home_page; ?>
     </p>
     <div class="container-service">
         <?php foreach ($services as $serv): ?>
@@ -41,7 +42,5 @@ $services = $app->getTable('Services')->all();
     </div>
 
     <p class="text-pres text-pres-service">
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-        when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+        <?= $apparence->desc_bottom_home_page; ?>
     </p>

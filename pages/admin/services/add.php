@@ -7,24 +7,24 @@ $serviceTable = $app->getTable('Services');
 $categoryTable = $app->getTable('Category')->extractList('id', 'title');
 
 if(!empty($_POST)){
-    $result = $serviceTable->update($_GET['id'], [
+    $result = $serviceTable->create(
+            [
                 'title' => $_POST['title'],
                 'content' => $_POST['content'],
                 'category_id' => $_POST['category_id']
-        ]
+            ]
     );
 
+    /**
+     * Une fois que l'ajout a été fait, l'utilisateur est redirigé vers la page d'édition que tu peux changer si tu veux
+     */
     if($result){
-        ?>
-            <div class="alert alert-succes">Sauvegarde réussi !</div>
-        <?php
+        header('Location: admin.php?page=service.edit&id='. $app->getDb()->lastInsertId());
     }
 }
-
-$service = $serviceTable->find($_GET['id']);
 $category = $app->getTable('Category')->all();
 
-$form = new Form($service);
+$form = new Form($_POST);
 
 ?>
 <?php include ROOT . '/pages/templates/partials/admin-header.php'; ?>

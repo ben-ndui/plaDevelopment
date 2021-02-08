@@ -4,6 +4,7 @@
 if(!empty($_POST)){
     $auth = new \Core\Auth\DbAuth(App::getInstance()->getDb());
     if($auth->login($_POST['identifiant'], $_POST['password'])){
+        $_SESSION['sname'] = $_POST['identifiant'];
         header('Location: admin.php');
     }else{
         ?>

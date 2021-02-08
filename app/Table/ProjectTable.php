@@ -57,6 +57,4 @@ class ProjectTable extends Table {
         );
 
     }
-
-
 }

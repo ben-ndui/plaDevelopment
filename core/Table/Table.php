@@ -34,6 +34,14 @@ class Table{
         ", [$id], true);
     }
 
+    public function findWithName($name){
+        return $this->query("
+            SELECT *
+            FROM {$this->table}
+            WHERE username = ?
+        ", [$name], true);
+    }
+
     public function update($id, $fields){
         $sql_parts = [];
         $attributes = [];

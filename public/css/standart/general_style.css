@@ -1,0 +1,568 @@
+:root{
+    /* COULEUR ORANGE */
+    --globalOrange: #FF6100;
+    --globalOrangeRGB: rgba(255, 97, 0, 1) ;
+    --light-varianteOrange: #FFA46E;
+    --ultra-light-orange: #FFC4AA;
+
+    /* BLANC et BLANC CASSE */
+    --my-white: #FFFFFF;
+    --my-weight-white: #E4E4E4;
+
+    --background-color: #F6F6F6;
+
+    /* BLACK et GREY */
+    --my-black: #202020;
+    --my-grey: #EFEFEF;
+    --my-light-grey: #B1B1B1;
+
+    --text-color-theme : #FA5F02;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body, .container{
+    width: 100%;
+    height: 100%;
+    color: var(--text-color-theme);
+    background-color: var(--my-white);
+}
+
+.container{
+    position: relative;
+}
+
+/****************************
+** Mise en forme du header  *
+ ****************************/
+
+.header{
+    position: relative;
+    color: white;
+    width: 100%;
+    height: 100vh;
+    background:
+            linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+            url('../../assets/background/paysage.jpg') no-repeat center;
+    background-size: cover;
+    box-shadow: 10px 10px 10px 10px rgba(255, 255, 255, .5);
+    /*border: 1px solid red;/**/
+}
+
+.header-pages{
+    height: 60vh;
+}
+
+.header .logo-and-title{/*Block contenant le logo et le titre de la page d'accueil*/
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+}
+
+.logo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 120px;
+    height: 300px;
+    background: url("../../assets/logo/Logo.svg") no-repeat;
+    background-size: cover;
+    transform: translate(-50%, -50%);
+    /*border: 1px solid red;/**/
+}
+
+.header .header-nav-bar{
+    position: fixed;
+    width: 100%;
+    color: var(--text-color-theme);
+    background: var(--my-white);
+    box-shadow: 0 2px 5px 2px rgba(0, 0, 0, .2);
+    z-index: 10;
+}
+
+.header .header-nav-bar .header-nav-bar-humburger{
+    display: none;
+    width: 30px;
+    height: 30px;
+    padding: 2px;
+    border: 1px solid white;
+    text-align: center;
+    border-radius: 4px;
+    transition: all .2s ease-in-out;
+}
+
+.header .header-nav-bar .header-nav-bar-humburger .humburger-bar{
+    width: 100%;
+    height: 4px;
+    margin-top: 3px;
+    background: var(--my-white);
+    border-radius: 100px;
+}
+
+.header .header-nav-bar .header-nav-bar-humburger .humburger-bar-sec{
+    width: 50%;
+}
+
+.header .header-nav-bar .header-nav-bar-humburger:hover{
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+}
+
+.header-nav-bar .menu-coulissant{
+    display: none;
+    transition: all .5s ease-in-out;
+}
+
+/**************
+** MENU BAR  **
+ **************/
+
+.menu{
+    float: right;
+}
+
+.menu ul li{
+    list-style-type: none;
+    float: left;
+    padding: 20px;
+    height: 100%;
+    transition: all .3s ease-in-out;
+    /*border: 1px solid blue;/**/
+}
+
+.menu ul li a{
+    color: var(--text-color-theme);
+    transition: all .2s ease-in-out;
+}
+
+.menu ul li:hover > a{
+    padding: 5px;
+    background: linear-gradient(rgba(255,97,0, .2), rgba(255,97,0, .2)) left/0% 100% no-repeat;
+    animation: anime 2s ease-in-out infinite alternate;
+}
+
+.menu ul li:hover{
+    background-color: var(--my-white);
+}
+
+/********************************
+** Mise en forme du formulaire  *
+ ********************************/
+
+.container .form{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 310px;
+    height: 350px;
+    text-align: center;
+    padding-top: 100px;
+    background-image: url("../../assets/components/connexion_back.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    /*border: 1px solid red;/**/
+}
+
+.container .form p{
+    width: 100%;
+}
+
+.container .form p .input{
+    outline: none;
+    border: none;
+    width: 90%;
+    height: 50px;
+    margin-top: 30px;
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: center;
+    background: rgba(242, 242, 242, .5);
+}
+
+.container .form p .input-submit{
+    position: absolute;
+    width: 200px;
+    color: var(--my-white);
+    left: 40%;
+    bottom: -5px;
+    background: var(--globalOrange);
+    transform: translate(-40%, 0);
+    border-radius: 100px;
+    box-shadow: 0 0 3px 2px rgba(242,242,242,.5);
+    transition: all .5s ease-in-out;
+}
+
+.container .form p .input-submit:hover{
+    cursor: pointer;
+    color: var(--text-color-theme);
+    background: var(--my-white);
+    border: 1px solid var(--text-color-theme);
+}
+
+/**************************
+***   SERVICES DESIGN   ***
+ **************************/
+
+.container-service{
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+    /*border: 1px solid red;/**/
+}
+
+.container-service a{
+    position: relative;
+    vertical-align: top;
+    width: 200px;
+    height: 200px;
+    margin: 0.5%;
+    display: inline-block;
+    text-decoration: none;
+    color: var(--text-color-theme);
+    transition: all .3s ease-in-out;
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    float: left;
+    perspective: 500px;
+}
+
+.content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
+.card:hover .content {
+    transform: rotateY( 180deg ) ;
+    transition: transform 0.5s;
+}
+
+.front,
+.back {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: white;
+    color: var(--text-color-theme);
+    text-align: center;
+    font-size: 18px;
+    border-radius: 5px;
+    backface-visibility: hidden;
+}
+
+.front .img{
+    height: 100px;
+    /*border: 1px solid red;/**/
+    border-radius: 4px;
+}
+
+.front h3{
+    margin-top: 25px;
+}
+
+.back {
+    background: var(--globalOrange);
+    color: var(--my-white);
+    padding-bottom: 4px;
+    transform: rotateY( 180deg );
+    overflow-y: hidden;
+}
+
+.back h3{
+    margin-top: 10px;
+}
+
+.back p{
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    text-align: justify-all;
+    overflow: hidden;
+    color: var(--my-white);
+    /*border: 1px solid red;/**/
+}
+
+/***************************************************************
+** MISE EN FORME DU PREMIER STYLE DE PAGE SERVICE || PROJECT  **
+ ***************************************************************/
+
+.container-service-type-one{
+    /*border: 1px solid green;/**/
+    padding: 30px;
+    height: 100vh;
+    text-align: center;
+}
+
+.container-service-type-one .section{
+    padding: 5px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    float: left;
+    text-align: center;
+    vertical-align: top;
+    width: 520px;
+    height: 100%;
+    margin-left: 5%;
+    background: var(--globalOrange);
+    /*border: 1px solid var(--globalOrange);/**/
+    border-radius: 20px;
+    box-shadow: 0 0 4px 2px rgba(150, 150, 150, .2);
+}
+
+.container-service-type-one .section ul{
+    /*border: 1px solid purple;/**/
+    padding: 10px;
+    background: var(--my-white);
+    height: 100%;
+    border-radius: 20px;
+}
+
+.container-service-type-one .section ul li{
+    list-style-type: none;
+    font-size: 20px;
+    padding: 20px;
+    transition: all .5s ease-in-out;
+    /*border: 1px solid blue;/**/
+}
+
+.container-service-type-one .section ul li a{
+    text-decoration: none;
+    color: var(--text-color-theme);
+}
+
+.container-service-type-one .section ul li:hover > .container-service-type-one .section ul::after{
+    content: "";
+    width: 10px;
+    height: 3px;
+}
+
+.container-service-type-one .section ul li:hover{
+    background: linear-gradient(rgba(255,97,0, .2), rgba(255,97,0, .2)) left/0% 100% no-repeat;
+    animation: anime 2s ease-in-out infinite alternate;
+    border-bottom: 1px solid var(--globalOrange);
+}
+
+/*************************
+** TABLE ADMIN  **
+ *************************/
+
+table {
+    text-align: left;
+    line-height: 40px;
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 2px solid var(--globalOrange);
+    width: 80%;
+    margin: 50px auto;
+    border-radius: .25rem;
+}
+
+thead tr:first-child {
+    background: var(--globalOrange);
+    color: #fff;
+    border: none;
+}
+
+th:first-child,
+td:first-child {
+    padding: 0 15px 0 20px;
+}
+
+th {
+    font-weight: 500;
+}
+
+thead tr:last-child th {
+    border-bottom: 3px solid #ddd;
+}
+
+tbody tr:hover {
+    background-color: #f2f2f2;
+    cursor: default;
+}
+
+tbody tr:last-child td {
+    border: none;
+}
+
+tbody td {
+    border-bottom: 1px solid #ddd;
+}
+
+tbody td a{
+    text-decoration: none;
+}
+
+tbody td .textarea{
+    resize: none;
+    border: none;
+    background-color: #FEFEFE;
+    width: 100%;
+    height: 100px;
+    padding: 5px;
+    margin-top: 10px;
+    color: var(--globalOrange);
+    border-radius: 5px;
+}
+
+td:last-child {
+    text-align: right;
+    padding-right: 10px;
+}
+
+.edit:hover {
+    color: #0a79df;
+}
+
+.delete:hover {
+    color: #dc2a2a;
+}
+
+.container-admin{
+    padding-bottom: 50px;
+}
+
+.form-edit{
+    width: 90%;
+    margin: 50px auto;
+    padding: 10px;
+    /*border: 1px solid red;/**/
+}
+
+.form-edit p{
+    width: 100%;
+    margin: 20px auto;
+}
+
+.form-edit p .edit{
+    padding: 10px;
+    outline: none;
+    width: 100%;
+    border: none;
+    border-bottom: 3px solid var(--globalOrange);
+}
+
+.form-edit p .edit-submit{
+    outline: none;
+    padding: 10px;
+    font-size: 20px;
+    border: 1px solid var(--globalOrange);
+    color: #FA5F02;
+    background: transparent;
+    border-radius: 4px;
+    transition: all .2s ease-in-out;
+}
+
+.form-edit p .edit-submit:hover{
+    border: none;
+    background: var(--globalOrange);
+    color: var(--my-white);
+}
+
+/***************************
+** Link and stuff design  **
+ ***************************/
+
+.link, h1, h2, h3, h4{
+    text-decoration: none;
+}
+
+.surbrillance{
+    color: var(--ultra-light-orange);
+}
+
+.text-pres{
+    text-align: center;
+    padding: 30px;
+}
+
+.text-pres-service{
+    width: 80%;
+    font-size: 20px;
+    margin: 5% 10% 5% auto;
+}
+
+
+.btn-p{
+    padding: 50px 50px 50px 130px;
+    /*border: 1px solid blue;/**/
+}
+
+.button{
+    text-decoration: none;
+    text-align: center;
+    padding: 10px;
+    color: var(--text-color-theme);
+    background: transparent;
+    border: 1px solid var(--globalOrange);
+    transition: all .3s ease-in-out;
+    border-radius: 4px;
+}
+
+.button:hover{
+    border: none;
+    color: var(--my-white);
+    background: var(--globalOrange);
+}
+
+
+
+
+
+
+/*************************
+** ANIMATION KEYFRAMES  **
+ *************************/
+
+/* Animation qui apparait derrière chaque élément du navigation-bar */
+@keyframes anime {
+    0% {
+        background-size: 0% 100%;
+        background-position: left;
+    }
+    50% {
+        background-size: 70% 100%;
+    }
+    100% {
+        background-size: 0% 100%;
+        background-position: right;
+    }
+}
+
+#loader-wrapper .loader-section {
+    position: fixed;
+    top: 0;
+    width: 51%;
+    height: 100%;
+    background: #222222;
+    z-index: 1000;
+}
+
+#loader-wrapper .loader-section.section-left {
+    left: 0;
+}
+
+#loader-wrapper .loader-section.section-right {
+    right: 0;
+}
+
+#loader {
+    z-index: 1001; /* anything higher than z-index: 1000 of .loader-section */
+}
+h1 {
+    color: #EEEEEE;
+}

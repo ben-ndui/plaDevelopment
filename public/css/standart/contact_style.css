@@ -1,0 +1,121 @@
+/********************************
+** Mise en forme page contact   *
+ ********************************/
+
+.contact-header{
+    width: 100%;
+    height: 50vh;
+    background: var(--globalOrange);
+}
+
+.container-contact{
+    position: absolute;
+    width: 50%;
+    top: 10vh;
+    left: 50%;
+    text-align: center;
+    background: var(--my-white);
+    transform: translate(-50%, 0);
+    box-shadow: 0 10px 10px 10px rgba(100, 100, 100, .2);
+}
+
+.container-contact .header-pres-in-contact{
+    width: 100%;
+    height: 40.1vh;
+    background: var(--globalOrange);
+}
+
+.container-contact .header-pres-in-contact .img-pres{
+    position: relative;
+    width: 100%;
+    height: 30vh;
+    /*border: 1px solid purple;/**/
+}
+
+.container-contact .header-pres-in-contact .img-pres .img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 150px;
+    /*border: 1px solid red;/**/
+    transform: translate(-50%, -50%);
+}
+
+.container-contact .header-pres-in-contact .img-pres .contact-name{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    color: #FFFFFF;
+    transform: translate(-50%, -80%);
+}
+
+.container-contact .header-pres-in-contact .menu{
+    text-align: center;
+    width: 100%;
+    height: 10.1vh;
+    /*border: 1px solid red;/**/
+    color: var(--my-white);
+}
+
+.container-contact .header-pres-in-contact .menu .btn{
+    text-align: center;
+    float: left;
+    width: 33.33%;
+    height: 10.1vh;
+    margin: 0;
+    padding: 15px;
+    border: 1px solid rgba(240, 240, 240, .2);
+    transition: all .2s ease-in;
+}
+
+.container-contact .header-pres-in-contact .menu .btn .img{
+    width: 30px;
+    fill: var(--my-white);
+}
+
+.container-contact .header-pres-in-contact .menu .btn .img path{
+    width: 25px;
+    fill: #FFFFFF;
+}
+
+.container-contact .header-pres-in-contact .menu .btn-call .img{
+    width: 25px;
+}
+
+.container-contact .header-pres-in-contact .menu .btn-itineraire .img{
+    width: 15px;
+}
+
+.container-contact .header-pres-in-contact .menu .btn:hover > .img > path{
+    cursor: pointer;
+    fill: var(--text-color-theme);
+}
+
+.container-contact .header-pres-in-contact .menu .btn:hover{
+    color: var(--text-color-theme);
+    background: var(--my-white);
+}
+
+/*******************************************
+**  Mise en forme page contact MORE INFOS  *
+ *******************************************/
+
+.more-infos{
+    width: 100%;
+    padding: 30px 50px;
+}
+
+.more-infos .more-infos-elem{
+    text-align: left;
+    margin: 50px;
+}
+
+.more-infos .more-infos-elem .more-infos-elem-img, .more-infos-elem-text{
+    display: inline-block;
+}
+
+.more-infos .more-infos-elem .more-infos-elem-img{
+    width: 30px;
+    margin-right: 30px;
+}

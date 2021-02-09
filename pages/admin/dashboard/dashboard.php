@@ -14,6 +14,8 @@
 
 ?>
 
+<?php include ROOT . '/pages/templates/partials/dashboard-header.php'; ?>
+
 <div class="grid">
     <header class="header">
         <i class="fas fa-bars header__menu"></i>

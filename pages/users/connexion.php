@@ -23,9 +23,8 @@ use Core\HTML\Form;
 $form = new Form($_POST);
 
 
-
-
 ?>
+    <?php include ROOT . '/pages/templates/partials/connexion-header.php'; ?>
 
     <form class="form" method="post">
         <?= $form->input("identifiant", ['password'=>'text', 'classname'=>'input input-id', 'plholder'=>'Identifiant']); ?>

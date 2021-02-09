@@ -17,27 +17,22 @@
     </p>
 
     <?php foreach ($categories as $category):?>
-        <table class="rwd-table">
-            <thead>
-                <tr>
-                    <td>ID</td>
-                    <td>LIBELLE</td>
-                    <td>ACTIONS</td>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><?= $category->id; ?></td>
-                    <td><?= $category->title; ?></td>
-                    <td>
-                        <a href="?page=category.edit&id=<?= $category->id;?>"><i class="material-icons button">edit</i></a>
-                        <form action="?page=category.delete" method="post" style="display: inline;">
-                            <input type="hidden" name="id" value="<?= $category->id; ?>">
-                            <button type="submit" class="button"><i class="material-icons">delete</i></button>
-                        </form>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="my-card-container">
+            <div class="top-of-my-card">
+                <?= $category->title; ?>
+                <span class="my-delete">
+                    <form action="?page=category.delete" method="post" >
+                        <input type="hidden" name="id" value="<?= $category->id; ?>">
+                        <button type="submit" class="my-submit"><i class="material-icons">X</i></button>
+                    </form>
+                </span>
+
+                <a href="?page=category.edit&id=<?= $category->id;?>" class="edit-btn"><i>editer</i></a>
+            </div>
+            <div class="card-elem card-elem-image"></div>
+            <div class="card-elem card-elem-title"></div>
+            <div class="card-description"><?= $category->content; ?></div>
+            <div class="card-elem card-elem-action"></div>
+        </div>
     <?php endforeach;?>
 </div>

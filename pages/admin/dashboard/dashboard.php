@@ -3,10 +3,14 @@
     $app = App::getInstance();
     $usersTable = $app->getTable('User');
     $projectsTable = $app->getTable('Project')->all();
+    $servicesTable = $app->getTable('Services')->all();
 
     $currentUser = $usersTable->findWithName($_SESSION['sname']);
+    $totalProjects = count($projectsTable);
+    $totalServices = count($servicesTable);
+    $totalPage = $totalServices + $totalProjects;
 
-    //var_dump($currentUser);
+    //var_dump($totalProjects);
 
 ?>
 
@@ -94,66 +98,86 @@
                 </div>
                 <div class="quickview">
                     <div class="quickview__item">
-                        <div class="quickview__item-total">41</div>
+                        <div class="quickview__item-total"><?= $totalPage; ?></div>
                         <div class="quickview__item-description">
                             <i class="far fa-calendar-alt"></i>
-                            <span class="text-light">Events</span>
+                            <span class="text-light">Pages en tout</span>
                         </div>
                     </div>
                     <div class="quickview__item">
-                        <div class="quickview__item-total">64</div>
+                        <div class="quickview__item-total"><?= $totalProjects; ?></div>
                         <div class="quickview__item-description">
                             <i class="far fa-comment"></i>
-                            <span class="text-light">Messages</span>
+                            <span class="text-light">Projets en tout</span>
                         </div>
                     </div>
                     <div class="quickview__item">
-                        <div class="quickview__item-total">27&deg;</div>
+                        <div class="quickview__item-total"><?= $totalServices; ?></div>
                         <div class="quickview__item-description">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span class="text-light">Austin</span>
+                            <i class="far fa-comment"></i>
+                            <span class="text-light">Services en tout</span>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
         <div class="main-overview">
-            <div class="overviewCard">
-                <div class="overviewCard-icon overviewCard-icon--document">
-                    <i class="far fa-file-alt"></i>
+            <a href="?page=project.param">
+                <div class="overviewCard">
+                    <div class="overviewCard-icon overviewCard-icon--document">
+                        <i class="far fa-file-alt"></i>
+                    </div>
+                    <div class="overviewCard-description">
+                        <h3 class="overviewCard-title text-light">Creer une <strong>Page projet</strong></h3>
+                    </div>
                 </div>
-                <div class="overviewCard-description">
-                    <h3 class="overviewCard-title text-light">New <strong>Document</strong></h3>
-                    <p class="overviewCard-subtitle">Europe Trip</p>
+            </a>
+
+            <a href="?page=service.param">
+                <div class="overviewCard">
+                    <div class="overviewCard-icon overviewCard-icon--calendar">
+                        <i class="far fa-calendar-check"></i>
+                    </div>
+                    <div class="overviewCard-description">
+                        <h3 class="overviewCard-title text-light">Créer une<strong>Page services</strong></h3>
+                    </div>
                 </div>
-            </div>
-            <div class="overviewCard">
-                <div class="overviewCard-icon overviewCard-icon--calendar">
-                    <i class="far fa-calendar-check"></i>
+            </a>
+
+            <a href="?page=project.param">
+                <div class="overviewCard">
+                    <div class="overviewCard-icon overviewCard-icon--mail">
+                        <i class="far fa-envelope"></i>
+                    </div>
+                    <div class="overviewCard-description">
+                        <h3 class="overviewCard-title text-light">Modifier <strong>mes projets</strong></h3>
+                    </div>
                 </div>
-                <div class="overviewCard-description">
-                    <h3 class="overviewCard-title text-light">Upcoming <strong>Event</strong></h3>
-                    <p class="overviewCard-subtitle">Chili Cookoff</p>
+            </a>
+
+            <a href="?page=service.param">
+                <div class="overviewCard">
+                    <div class="overviewCard-icon overviewCard-icon--photo">
+                        <i class="far fa-file-image"></i>
+                    </div>
+                    <div class="overviewCard-description">
+                        <h3 class="overviewCard-title text-light">Modifier mes <strong>services</strong></h3>
+                    </div>
                 </div>
-            </div>
-            <div class="overviewCard">
-                <div class="overviewCard-icon overviewCard-icon--mail">
-                    <i class="far fa-envelope"></i>
+            </a>
+
+            <a href="?page=contact.param">
+                <div class="overviewCard">
+                    <div class="overviewCard-icon overviewCard-icon--photo">
+                        <i class="far fa-file-image"></i>
+                    </div>
+                    <div class="overviewCard-description">
+                        <h3 class="overviewCard-title text-light">Modifier page <strong>contact</strong></h3>
+                    </div>
                 </div>
-                <div class="overviewCard-description">
-                    <h3 class="overviewCard-title text-light">Recent <strong>Emails</strong></h3>
-                    <p class="overviewCard-subtitle">+10</p>
-                </div>
-            </div>
-            <div class="overviewCard">
-                <div class="overviewCard-icon overviewCard-icon--photo">
-                    <i class="far fa-file-image"></i>
-                </div>
-                <div class="overviewCard-description">
-                    <h3 class="overviewCard-title text-light">New <strong>Album</strong></h3>
-                    <p class="overviewCard-subtitle">House Concert</p>
-                </div>
-            </div>
+            </a>
+
         </div> <!-- /.main__overview -->
         <div class="main__cards">
             <div class="card">
@@ -263,7 +287,7 @@
     </main>
 
     <footer class="footer">
-        <p><span class="footer__copyright">&copy;</span> 2018 MTH</p>
-        <p>Crafted with <i class="fas fa-heart footer__icon"></i> by <a href="https://www.linkedin.com/in/matt-holland/" target="_blank" class="footer__signature">Matt H</a></p>
+        <p><span class="footer__copyright">&copy;</span> PLA Development 2021</p>
+        <p><i class="fas fa-heart footer__icon"></i> by <a href="https://www.linkedin.com/in/matt-holland/" target="_blank" class="footer__signature">Smooth & Design</a></p>
     </footer>
 </div>

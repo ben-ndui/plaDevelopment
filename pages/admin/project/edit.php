@@ -35,10 +35,11 @@ $form = new Form($project);
         <?= $form->input("title", ['type'=>'text', 'classname'=>'edit edit-title']); ?>
         <?= $form->input("content", ['type'=>'textarea', 'classname'=>'edit edit-content']); ?>
         <?= $form->select("category_id", $categoryTable); ?>
-        <?= $form->submit('Sauvegarder', "edit-submit"); ?>
+        <?= $form->submit('Sauvegarder', "submit"); ?>
     </form>
 
 </div>
+
 
 
 

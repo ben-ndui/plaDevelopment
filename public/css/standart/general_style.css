@@ -61,13 +61,8 @@ html, body, .container{
     z-index: 0;
 }
 
-.my-header-pages{
+.header-pages{
     height: 60vh;
-}
-
-.my-header-admin{
-    border-bottom-left-radius: 20% 30%;
-    border-bottom-right-radius: 20% 30%;
 }
 
 .my-header .logo-and-title{/*Block contenant le logo et le titre de la page d'accueil*/
@@ -373,117 +368,84 @@ html, body, .container{
 ** TABLE ADMIN  **
  *************************/
 
-table {
-    text-align: left;
-    line-height: 40px;
-    border-collapse: separate;
-    border-spacing: 0;
-    border: 2px solid var(--globalOrange);
+.my-card-container{
+    display: block;
     width: 80%;
     margin: 50px auto;
-    border-radius: .25rem;
+    text-align: center;
+    background: var(--my-white);
+    box-shadow: 0 2px 4px rgba(100,100,100,.1);
 }
 
-thead tr:first-child {
-    background: var(--globalOrange);
-    color: #fff;
-    border: none;
-}
-
-th:first-child,
-td:first-child {
-    padding: 0 15px 0 20px;
-}
-
-th {
-    font-weight: 500;
-}
-
-thead tr:last-child th {
-    border-bottom: 3px solid #ddd;
-}
-
-tbody tr:hover {
-    background-color: #f2f2f2;
-    cursor: default;
-}
-
-tbody tr:last-child td {
-    border: none;
-}
-
-tbody td {
-    border-bottom: 1px solid #ddd;
-}
-
-tbody td a{
-    text-decoration: none;
-}
-
-tbody td .textarea{
-    resize: none;
-    border: none;
-    background-color: #FEFEFE;
+.top-of-my-card{
+    color: var(--my-white);
     width: 100%;
-    height: 100px;
     padding: 5px;
-    margin-top: 10px;
-    color: var(--globalOrange);
-    border-radius: 5px;
+    text-align: left;
+    background: var(--globalOrange);
 }
 
-td:last-child {
-    text-align: right;
-    padding-right: 10px;
-}
-
-.edit:hover {
-    color: #0a79df;
-}
-
-.delete:hover {
-    color: #dc2a2a;
-}
-
-.container-admin{
-    padding-bottom: 50px;
-}
-
-.form-edit{
-    width: 90%;
-    margin: 50px auto;
-    padding: 10px;
-    /*border: 1px solid red;/**/
-}
-
-.form-edit p{
-    width: 100%;
-    margin: 20px auto;
-}
-
-.form-edit p .edit{
-    padding: 10px;
-    outline: none;
-    width: 100%;
-    border: none;
-    border-bottom: 3px solid var(--globalOrange);
-}
-
-.form-edit p .edit-submit{
-    outline: none;
-    padding: 10px;
-    font-size: 20px;
+.my-delete{
+    float: right;
+    width: 30px;
+    height: 30px;
+    line-height: 28px;
+    margin-top: -6px;
+    margin-right: -50px;
+    background: var(--globalOrange);
+    border-radius: 50px;
+    text-align: center;
     border: 1px solid var(--globalOrange);
-    color: #FA5F02;
-    background: transparent;
-    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(100,100,100,.1);
     transition: all .2s ease-in-out;
 }
 
-.form-edit p .edit-submit:hover{
+.my-delete:hover{
+    width: 35px;
+    height: 35px;
+    background: red;
+    color: #FFFFFF;
     border: none;
-    background: var(--globalOrange);
+}
+
+.edit-btn{
+    text-decoration: none;
+    float: right;
     color: var(--my-white);
+    transition: all .2s ease-in-out;
+}
+
+.edit-btn:hover{
+    font-size: 20px;
+}
+
+.card-description{
+    padding: 30px;
+    text-align: justify;
+}
+
+.my-submit{
+    outline: none;
+    border: none;
+    background: transparent;
+    color: var(--my-white);
+}
+
+.submit{
+    position: relative;
+    border: none;
+    outline: none;
+    margin: 20px auto;
+    padding: 20px;
+    width: 200px;
+    font-size: 18px;
+    border-radius: 4px;
+    transition: all .3s ease-in-out;
+}
+
+.submit:hover{
+    color: white;
+    background-color: var(--globalOrange);
 }
 
 /***************************
@@ -533,9 +495,33 @@ td:last-child {
     background: var(--globalOrange);
 }
 
+/****************************
+**      FORM DESIGN        **
+ ****************************/
+.form-edit{
+    width: 90%;
+    margin: 50px auto;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(100,100,100,.1);
+}
 
+input, textarea, select{
+    font-size: 18px;
+    width: 100%;
+    padding: 20px;
+    margin-top: 20px;
+    border: 1px solid var(--globalOrange);
+    border-radius: 4px;
+}
 
+textarea{
+    height: 300px;
+}
 
+select{
+    width: 200px;
+    padding: 20px;
+}
 
 
 /*************************
@@ -577,3 +563,7 @@ td:last-child {
 #loader {
     z-index: 1001; /* anything higher than z-index: 1000 of .loader-section */
 }
+
+/****************
+** MES TEST
+ */

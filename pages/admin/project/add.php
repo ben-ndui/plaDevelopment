@@ -29,17 +29,13 @@ $form = new Form($_POST);
 ?>
 <?php include ROOT . '/pages/templates/partials/admin-header.php'; ?>
 
-<div class="container">
+<div class="container container-add">
 
     <form class="form-edit" method="post">
         <?= $form->input("title", ['type'=>'text', 'classname'=>'edit edit-title']); ?>
         <?= $form->input("content", ['type'=>'textarea', 'classname'=>'edit edit-content']); ?>
         <?= $form->select("category_id", $categoryTable); ?>
-        <?= $form->submit('Sauvegarder', "edit-submit"); ?>
+        <?= $form->submit('Sauvegarder', "submit"); ?>
     </form>
 
 </div>
-
-
-
-

@@ -26,6 +26,10 @@ class Table{
 
     }
 
+    public function total(){
+        return $this->query('SELECT COUNT(*) as total FROM ' . $this->table);
+    }
+
     public function find($id){
         return $this->query("
             SELECT *

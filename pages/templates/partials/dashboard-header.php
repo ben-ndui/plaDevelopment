@@ -3,6 +3,8 @@
 
 $app = App::getInstance();
 
+$app->title = "Admin - Dashboard";
+
 ?>
 
 <!DOCTYPE html>

@@ -2,7 +2,7 @@
 
     $app = App::getInstance();
 
-    $app->title = "ADMINISTRATION PLA";
+    $app->title = "CREER - MODIFIER - AJOUTER  SUPPRIMER";
 
     $apparence = $app->getTable('Site')->find(1);
 

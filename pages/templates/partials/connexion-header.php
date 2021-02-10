@@ -2,6 +2,8 @@
 
 $app = App::getInstance();
 
+$app->title = "Admin";
+
 ?>
 
 <!DOCTYPE html>

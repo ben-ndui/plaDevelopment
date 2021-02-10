@@ -131,7 +131,7 @@
                         <i class="far fa-file-alt"></i>
                     </div>
                     <div class="overviewCard-description">
-                        <h3 class="overviewCard-title text-light">Creer une <strong>Page projet</strong></h3>
+                        <h3 class="overviewCard-title text-light">Créer / Modifier une <strong>Page projet</strong></h3>
                     </div>
                 </div>
             </a>
@@ -142,40 +142,7 @@
                         <i class="far fa-calendar-check"></i>
                     </div>
                     <div class="overviewCard-description">
-                        <h3 class="overviewCard-title text-light">Créer une<strong>Page services</strong></h3>
-                    </div>
-                </div>
-            </a>
-
-            <a href="?page=project.param">
-                <div class="overviewCard">
-                    <div class="overviewCard-icon overviewCard-icon--mail">
-                        <i class="far fa-envelope"></i>
-                    </div>
-                    <div class="overviewCard-description">
-                        <h3 class="overviewCard-title text-light">Modifier <strong>mes projets</strong></h3>
-                    </div>
-                </div>
-            </a>
-
-            <a href="?page=service.param">
-                <div class="overviewCard">
-                    <div class="overviewCard-icon overviewCard-icon--photo">
-                        <i class="far fa-file-image"></i>
-                    </div>
-                    <div class="overviewCard-description">
-                        <h3 class="overviewCard-title text-light">Modifier mes <strong>services</strong></h3>
-                    </div>
-                </div>
-            </a>
-
-            <a href="?page=contact.param">
-                <div class="overviewCard">
-                    <div class="overviewCard-icon overviewCard-icon--photo">
-                        <i class="far fa-file-image"></i>
-                    </div>
-                    <div class="overviewCard-description">
-                        <h3 class="overviewCard-title text-light">Modifier page <strong>contact</strong></h3>
+                        <h3 class="overviewCard-title text-light">Créer / Modifier une <strong>Page services</strong></h3>
                     </div>
                 </div>
             </a>

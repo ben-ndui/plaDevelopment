@@ -2,6 +2,8 @@
 
     $app = App::getInstance();
 
+    $app->title = "ADMINISTRATION PLA";
+
     $apparence = $app->getTable('Site')->find(1);
 
 ?>

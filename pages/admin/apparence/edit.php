@@ -26,7 +26,7 @@ $apparence = $apparenceTable->find(1);
 $form = new Form($apparence);
 
 ?>
-<?php include ROOT . '/pages/templates/partials/admin-header.php'; ?>
+<?php include ROOT . '/pages/templates/partials/headers/admin-header.php'; ?>
 
 <div class="container">
 

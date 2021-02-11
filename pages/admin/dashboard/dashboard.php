@@ -15,7 +15,7 @@
 
 ?>
 
-<?php include ROOT . '/pages/templates/partials/dashboard-header.php'; ?>
+<?php include ROOT . '/pages/templates/partials/headers/dashboard-header.php'; ?>
 
 <div class="grid">
     <header class="header">

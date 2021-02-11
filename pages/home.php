@@ -9,7 +9,7 @@ $apparence = $apparenceTable->find(1);
 
 ?>
 
-    <?php include 'templates/partials/header.php'; ?>
+    <?php include 'templates/partials/headers/header.php'; ?>
 
     <p class="text-pres text-pres-service">
         <?= $apparence->desc_top_home_page; ?>

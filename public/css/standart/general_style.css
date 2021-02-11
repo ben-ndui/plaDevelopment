@@ -78,24 +78,16 @@
 .logo{
     position: absolute;
     color: #FF6100;
-    width: 120px;
+    width: 60px;
+    height: 60px;
     font-size: 20px;
-    top: 50%;
-    left: 10%;
-    border-bottom: 1px solid var(--globalOrange);
+    top: 60%;
+    left: 5%;
     background-size: cover;
     transform: translate(-50%, -50%);
+    background: url("../../assets/logo/logo2.svg") no-repeat;
+    background-size: contain;
     /*border: 1px solid red;/**/
-}
-
-.logo::after{
-    position: absolute;
-    content: "";
-    width: 50px;
-    top: 70%;
-    left: 29%;
-    border: 1px solid var(--text-color-theme);
-    transform: translate(0, 0);
 }
 
 .my-header .header-nav-bar{
@@ -103,7 +95,7 @@
     width: 100%;
     color: var(--text-color-theme);
     background: var(--my-white);
-    box-shadow: 0 2px 5px 2px rgba(0, 0, 0, .2);
+    /*box-shadow: 0 2px 5px 2px rgba(0, 0, 0, .2);/**/
     z-index: 10;
 }
 
@@ -247,25 +239,13 @@
     /*border: 1px solid red;/**/
 }
 
-.container-service a{
-    position: relative;
-    vertical-align: top;
-    width: 200px;
-    height: 200px;
-    margin: 0.5%;
-    display: inline-block;
-    text-decoration: none;
-    color: var(--text-color-theme);
-    transition: all .3s ease-in-out;
-}
-
 .card {
     position: relative;
-    width: 200px;
-    height: 200px;
+    width: 22%;
+    height: 300px;
     display: inline-block;
     margin: 0.5%;
-    perspective: 500px;
+    perspective: 600px;
 }
 
 .content {

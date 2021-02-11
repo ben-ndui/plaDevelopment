@@ -2,7 +2,7 @@
 
 ?>
 
-<?php include 'templates/partials/connexion-header.php'; ?>
+<?php include 'templates/partials/headers/connexion-header.php'; ?>
 
 <header class="contact-header"></header>
 

@@ -22,7 +22,7 @@ $user = $usersTable->findWithName($_SESSION['sname']);
 $form = new Form($user);
 
 ?>
-<?php include ROOT . '/pages/templates/partials/admin-header.php'; ?>
+<?php include ROOT . '/pages/templates/partials/headers/admin-header.php'; ?>
 
 <div class="container">
 

@@ -34,31 +34,7 @@
 
 <header class="my-header header-pages">
     <img src="<?= $apparence->imgURL_home_page;?>">
-    <nav class="header-nav-bar">
-        <div class="header-nav-bar-humburger">
-            <div class="humburger-bar humburger-bar-first"></div>
-            <div class="humburger-bar humburger-bar-sec"></div>
-            <div class="humburger-bar humburger-bar-third"></div>
-        </div>
-
-        <ul class="menu-coulissant">
-            <li><a href="?page=home" name="#" class="link link-nav-bar">ACCUEIL</a></li>
-            <li><a href="#" name="#" class="link link-nav-bar">SERVICES</a></li>
-            <li><a href="?page=service&id=1" name="#" class="link link-nav-bar">MES PROJETS</a></li>
-            <li><a href="?page=contact" name="#" class="link link-nav-bar">ME CONTACTER</a></li>
-            <li><a href="?page=connexion" name="#" class="link link-nav-bar">CONNEXION</a></li>
-        </ul>
-
-        <div class="menu">
-            <ul>
-                <li><a href="?page=home" name="#" class="link link-nav-bar">ACCUEIL</a></li>
-                <li><a href="#" name="#" class="link link-nav-bar">SERVICES</a></li>
-                <li><a href="?page=project&id=1" name="#" class="link link-nav-bar">MES PROJETS</a></li>
-                <li><a href="?page=contact" name="#" class="link link-nav-bar">ME CONTACTER</a></li>
-                <li><a href="?page=connexion" name="#" class="link link-nav-bar">CONNEXION</a></li>
-            </ul>
-        </div>
-    </nav>
+    <?php include 'components/nav-widget.php'; ?>
 
     <div class="logo-and-title">
         <h1>

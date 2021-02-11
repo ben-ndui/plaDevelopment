@@ -23,7 +23,7 @@ $category = $categoryTable->find($_GET['id']);
 $form = new Form($category);
 
 ?>
-<?php include ROOT . '/pages/templates/partials/admin-header.php'; ?>
+<?php include ROOT . '/pages/templates/partials/headers/admin-header.php'; ?>
 
 <div class="container">
 

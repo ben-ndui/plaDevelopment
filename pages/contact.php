@@ -2,6 +2,8 @@
 
 ?>
 
+<?php include 'templates/partials/connexion-header.php'; ?>
+
 <header class="contact-header"></header>
 
 <div class="container-contact">

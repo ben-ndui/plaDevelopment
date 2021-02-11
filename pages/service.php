@@ -25,6 +25,8 @@
 
 ?>
 
+<?php include 'templates/partials/pages-header.php'; ?>
+
 <?php if ($service->title === "Focalisons sur le résultat"):?>
 
     <?= include 'templates/partials/pages-header.php';?>
@@ -52,4 +54,19 @@
     <p>
         <?= $service->content; ?>
     </p>
+
+<h1>GjJHJKGK</h1>
+
+<div class="container container-service-type-one">
+    <section class="section section-left">
+        <ul>
+            <?php foreach ($allproject as $proj): ?>
+                <li>
+                    <a href="<?=$proj->url ?>"><?=$proj->title;?></a>
+                </li>
+            <?php endforeach; ?>
+        </ul>
+    </section>
+    <section class="section section-right"></section>
+</div>
 

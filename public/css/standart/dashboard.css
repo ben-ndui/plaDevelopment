@@ -1,3 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Quicksand;
+}
+
 a {
     text-decoration: none;
 }
@@ -63,7 +72,6 @@ a {
     border: none;
 }
 .header__avatar {
-    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1609106/headshot.png");
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 50%;
@@ -184,7 +192,6 @@ a {
     background-color: rgba(255, 255, 255, 0.1);
 }
 .sidenav__profile-avatar {
-    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1609106/headshot.png");
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 50%;

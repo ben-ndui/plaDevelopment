@@ -22,7 +22,7 @@
             <div class="top-of-my-card">
                 <?= $service->title; ?>
                 <span class="my-delete">
-                    <form action="?page=project.delete" method="post" >
+                    <form action="?page=service.delete" method="post" >
                         <input type="hidden" name="id" value="<?= $service->id; ?>">
                         <button type="submit" class="my-submit"><i class="material-icons">X</i></button>
                     </form>

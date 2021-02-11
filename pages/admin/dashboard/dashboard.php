@@ -6,6 +6,7 @@
     $servicesTable = $app->getTable('Services')->all();
 
     $currentUser = $usersTable->findWithName($_SESSION['sname']);
+
     $totalProjects = count($projectsTable);
     $totalServices = count($servicesTable);
     $totalPage = $totalServices + $totalProjects;
@@ -22,7 +23,7 @@
         <div class="header__search">
             <input class="header__input" placeholder="Search..." />
         </div>
-        <div class="header__avatar">
+        <div class="header__avatar" style="background-image: url(<?= $currentUser->imageURL; ?>);">
             <div class="dropdown">
                 <ul class="dropdown__list">
                     <li class="dropdown__list-item">
@@ -45,11 +46,11 @@
     <aside class="sidenav">
         <div class="sidenav__brand">
             <i class="fas fa-feather-alt sidenav__brand-icon"></i>
-            <a class="sidenav__brand-link" href="#">PLA<span class="text-light"> Development</span></a>
+            <a class="sidenav__brand-link" href="index.php?page=home">PLA<span class="text-light"> Development</span></a>
             <i class="fas fa-times sidenav__brand-close"></i>
         </div>
         <div class="sidenav__profile">
-            <div class="sidenav__profile-avatar"></div>
+            <div class="sidenav__profile-avatar" style="background-image: url(<?= $currentUser->imageURL; ?>);"></div>
             <div class="sidenav__profile-title text-light"><?= $currentUser->username; ?></div>
         </div>
         <div class="row row--align-v-center row--align-h-center">

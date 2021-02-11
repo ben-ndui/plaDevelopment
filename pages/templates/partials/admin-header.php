@@ -54,8 +54,6 @@
             </div>
         </nav>
 
-        <div class="logo"></div>
-
         <div class="logo-and-title">
             <h1>
                 <?= $app->title ;?>

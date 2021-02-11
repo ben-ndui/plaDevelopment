@@ -30,15 +30,16 @@
     font-family: Quicksand;
 }
 
-html, body, .container{
-    width: 100%;
-    height: 100%;
-    color: var(--text-color-theme);
-    background-color: var(--my-white);
+body{
+    padding-bottom: 30px;
 }
 
 .container{
     position: relative;
+    width: 100%;
+    height: 100%;
+    color: var(--text-color-theme);
+    background-color: var(--my-white);
 }
 
 /****************************
@@ -79,14 +80,25 @@ html, body, .container{
 
 .logo{
     position: absolute;
-    top: 50%;
-    left: 50%;
+    color: #FF6100;
     width: 120px;
-    height: 300px;
-    background: url("../../assets/logo/Logo.svg") no-repeat;
+    font-size: 20px;
+    top: 50%;
+    left: 10%;
+    border-bottom: 1px solid var(--globalOrange);
     background-size: cover;
     transform: translate(-50%, -50%);
     /*border: 1px solid red;/**/
+}
+
+.logo::after{
+    position: absolute;
+    content: "";
+    width: 50px;
+    top: 70%;
+    left: 29%;
+    border: 1px solid var(--text-color-theme);
+    transform: translate(0, 0);
 }
 
 .my-header .header-nav-bar{
@@ -168,11 +180,11 @@ html, body, .container{
 ** Mise en forme du formulaire  *
  ********************************/
 
-.container .form{
+.container > .form{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, 50%);
     width: 310px;
     height: 350px;
     text-align: center;
@@ -183,11 +195,11 @@ html, body, .container{
     /*border: 1px solid red;/**/
 }
 
-.container .form p{
+.container > .form > p{
     width: 100%;
 }
 
-.container .form p .input{
+.container .form > p .input{
     outline: none;
     border: none;
     width: 90%;
@@ -199,7 +211,7 @@ html, body, .container{
     background: rgba(242, 242, 242, .5);
 }
 
-.container .form p .input-submit{
+.container > .form > p .input-submit{
     position: absolute;
     width: 200px;
     color: var(--my-white);
@@ -212,7 +224,7 @@ html, body, .container{
     transition: all .5s ease-in-out;
 }
 
-.container .form p .input-submit:hover{
+.container > .form > p .input-submit:hover{
     cursor: pointer;
     color: var(--text-color-theme);
     background: var(--my-white);
@@ -225,9 +237,12 @@ html, body, .container{
 
 .container-service{
     width: 100%;
+    height: auto;
     padding-top: 30px;
     padding-bottom: 30px;
     text-align: center;
+    overflow-y: scroll;
+    overflow-x: hidden;
     /*border: 1px solid red;/**/
 }
 
@@ -244,9 +259,11 @@ html, body, .container{
 }
 
 .card {
-    width: 100%;
-    height: 100%;
-    float: left;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    margin: 0.5%;
     perspective: 500px;
 }
 
@@ -278,13 +295,16 @@ html, body, .container{
 }
 
 .front .img{
-    height: 100px;
+    height: 100%;
     /*border: 1px solid red;/**/
     border-radius: 4px;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .front h3{
-    margin-top: 25px;
+    margin-top: -50%;
+    color: #FFFFFF;
 }
 
 .back {
@@ -308,6 +328,51 @@ html, body, .container{
     color: var(--my-white);
     /*border: 1px solid red;/**/
 }
+
+/**********************************************************************
+** MISE EN FORME DE LA PRESENTATION DE PATRICE LARMOYER sur HOMEPAGE **
+ **********************************************************************/
+.container-home-presentation{
+    padding: 50px;
+    height: auto;
+    margin: 50px auto;
+    /*border: 1px solid blue;/**/
+    text-align: center;
+    background-color: var(--my-grey);
+}
+
+.home-elem{
+    /*border: 1px solid red;/**/
+    display: inline-block;
+    margin: 20px;
+    vertical-align: top;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    background: #FFFFFF;
+}
+
+.home-elem-image{
+    width: 20vw;
+    height: auto;
+    padding: 4px;
+    background: var(--my-white);
+}
+
+.home-elem-image img{
+    width: 100%;
+    height: 100%;
+    image-resolution: from-image;
+    border-radius: 10px;
+}
+
+.home-elem-desc-all{
+    width: 30vw;
+    padding: 49px;
+    text-align: justify;
+    white-space: pre-line;
+    color: var(--my-black);
+}
+
 
 /***************************************************************
 ** MISE EN FORME DU PREMIER STYLE DE PAGE SERVICE || PROJECT  **
@@ -457,6 +522,13 @@ html, body, .container{
 ** Link and stuff design  **
  ***************************/
 
+.title-strong{
+    font-size: 50px;
+    text-align: left;
+    margin: 50px auto;
+    padding: 90px;
+}
+
 .link{
     color: white;
     text-decoration: none;
@@ -527,6 +599,43 @@ select{
     width: 200px;
     padding: 20px;
 }
+
+/************
+** FOOTER  **
+ ************/
+
+.main-footer{
+    /*border: 1px solid red;/**/
+    width: 90vw;
+    height: auto;
+    margin: auto;
+    padding: 10px;
+    color: var(--my-white);
+    text-align: center;
+    background: var(--globalOrange);
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(100,100,100,.5);
+}
+
+.main-footer > .footer-elem{
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+    width: 30%;
+    height: 300px;
+    margin: 8px;
+    padding: 30px;
+    /*border: 1px solid blue;/**/
+}
+
+.main-footer > .footer-elem li{
+    list-style-type: none;
+    margin: 30px auto;
+    font-size: 20px;
+}
+
+
 
 
 /*************************

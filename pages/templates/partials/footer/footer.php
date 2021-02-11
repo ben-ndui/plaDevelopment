@@ -2,17 +2,17 @@
 
 <footer class="main-footer">
     <ul class="footer-elem footer-row">
-        <h1>NICE</h1>
+        <h2>NICE</h2>
         <li>Adresse Email</li>
         <li>Adresse</li>
         <li>Telephone Fixe</li>
     </ul>
-    <ul class="footer-elem footer-row">
-        <h1>MES RESEAUX</h1>
-        <li>linkedin</li>
-        <li>Instagram</li>
+    <ul class="footer-elem footer-row footer-elem-social">
+        <h2>MES RESEAUX</h2>
+        <li class="social social-linkedin">linkedin</li>
+        <li class="social social-instagram">Instagram</li>
     </ul>
     <ul class="footer-elem footer-row">
-        <h1>FLUX LINKEDIN</h1>
+        <h2 >FLUX LINKEDIN</h2>
     </ul>
 </footer>

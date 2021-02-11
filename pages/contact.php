@@ -21,7 +21,7 @@
             </svg>
             <p class="contact-name">Patrice LARMOYER</p>
         </div>
-        <div class="menu">
+        <div class="menu menu-contact">
             <div class="btn btn-call">
                 <svg class="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 221.432 221.432">
                     <path id="Icon_material-local-phone" data-name="Icon material-local-phone" d="M49.032,100.331A186.355,186.355,0,0,0,130.1,181.4l27.064-27.064a12.231,12.231,0,0,1,12.548-2.952,140.326,140.326,0,0,0,43.917,7.012,12.338,12.338,0,0,1,12.3,12.3V213.63a12.338,12.338,0,0,1-12.3,12.3C98.116,225.932,4.5,132.315,4.5,16.8A12.338,12.338,0,0,1,16.8,4.5H59.858a12.338,12.338,0,0,1,12.3,12.3,139.752,139.752,0,0,0,7.012,43.917A12.345,12.345,0,0,1,76.1,73.267L49.032,100.331Z" transform="translate(-4.5 -4.5)"/>

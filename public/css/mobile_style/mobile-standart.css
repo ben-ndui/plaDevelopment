@@ -1,26 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
 /* Sur les écrans, quand la largeur de la fenêtre fait au maximum 1280px */
 @media screen and (max-width: 1280px){
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Quicksand;
+    }
 
 }
 
 /* Sur tous types d'écran, quand la largeur de la fenêtre est comprise entre 1024px et 1280px */
 @media all and (min-width: 1024px) and (max-width: 1280px){
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Quicksand;
+    }
 
 }
 
 /* Sur les téléviseurs */
 @media tv{
-
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Quicksand;
+    }
 }
 
 /* Sur tous types d'écrans orientés verticalement */
 @media all and (orientation: portrait){
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Quicksand;
+    }
+
+    .container-contact{
+        width: 80%;
+        font-size: 18px;
+    }
+
     .menu{
         display: none;
+    }
+
+    .menu-contact{
+        display: block;
     }
 }
 
 @media (max-width: 37.5em) {
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Quicksand;
+    }
+
     .artboard {
         padding: 1rem;
     }
@@ -28,10 +70,25 @@
 
 @media only screen and (max-width: 37.5em),
 only screen and (hover: none) {
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Quicksand;
+    }
+
+    .container-service{
+        text-align: center;
+    }
+
     .card {
+        display: block;
         border-radius: 3px;
         background-color: #fff;
         box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.15);
+        margin: 50px auto;
+        width: 300px;
+        height: 300px;
     }
     .card__side {
         height: auto;
@@ -67,13 +124,36 @@ only screen and (hover: none) {
     }
 }
 
-@media all and (max-device-width: 480px) {
+@media all and (max-device-width: 780px) {
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Quicksand;
+    }
+
     h1{
         font-size: 20px;
     }
 
     .menu{
         display: none;
+    }
+
+    .menu-contact{
+        display: block;
+        z-index: 10;
+    }
+
+    .home-elem, .main-footer > .footer-elem{
+        display: block;
+        text-align: center;
+        width: 100%;
+        margin: 50px auto;
+    }
+
+    .home-elem-image{
+        width: 50%;
     }
 
     .text-pres-service {
@@ -133,6 +213,24 @@ only screen and (hover: none) {
     .container-service a {
         margin-bottom: 15px;
         box-shadow: 0 0 5px 2px rgba(0, 0, 0, .2);
+    }
+
+    .container-contact{
+        width: 90%;
+    }
+
+    .more-infos{
+        padding: 20px;
+    }
+
+    .more-infos .more-infos-elem {
+        text-align: left;
+        margin: 10px;
+        font-size: 15px;
+    }
+
+    .more-infos .more-infos-elem .more-infos-elem-img{
+        margin-right: 10px;
     }
 
 }

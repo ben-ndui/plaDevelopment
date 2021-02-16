@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Feb 15, 2021 at 01:37 PM
+-- Generation Time: Feb 16, 2021 at 11:46 AM
 -- Server version: 5.7.32
 -- PHP Version: 7.4.12
 
@@ -59,15 +59,39 @@ CREATE TABLE `article_contact` (
                                    `id` int(11) NOT NULL,
                                    `website_link` varchar(255) DEFAULT NULL,
                                    `contact_by` varchar(255) DEFAULT NULL,
-                                   `img_name` varchar(255) DEFAULT NULL
+                                   `img_name` varchar(255) DEFAULT NULL,
+                                   `project_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `article_contact`
 --
 
-INSERT INTO `article_contact` (`id`, `website_link`, `contact_by`, `img_name`) VALUES
-(1, 'www.smoothndesign.com', 'contact.smoothdesign@gmail.com', 'smoothdesign.svg');
+INSERT INTO `article_contact` (`id`, `website_link`, `contact_by`, `img_name`, `project_id`) VALUES
+(1, 'www.smoothndesign.com', 'contact.smoothdesign@gmail.com', 'myLogo.png', 1),
+(2, 'www.smoothndesign.com', 'Ben NDUI', 'myLogo.png', 3),
+(3, 'www.smoothndesign.com', 'Patrice L.', 'paysage.jpg', 2),
+(4, 'www.smoothndesign.com', 'Patrick M.', 'myLogo.png', 4),
+(5, 'www.smoothndesign.com', 'Ménélik J.', 'myLogo.png', 5);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `assoc_titre`
+--
+
+CREATE TABLE `assoc_titre` (
+                               `page_id` int(11) NOT NULL,
+                               `titre_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `assoc_titre`
+--
+
+INSERT INTO `assoc_titre` (`page_id`, `titre_id`) VALUES
+(1, 1),
+(1, 2);
 
 -- --------------------------------------------------------
 
@@ -80,6 +104,10 @@ CREATE TABLE `home` (
                         `name` varchar(255) DEFAULT NULL,
                         `titre` varchar(255) DEFAULT NULL,
                         `titre2` varchar(255) DEFAULT NULL,
+                        `titre3` varchar(255) DEFAULT NULL,
+                        `desc_titre1` varchar(255) DEFAULT NULL,
+                        `desc_titre2` varchar(255) DEFAULT NULL,
+                        `desc_titre3` varchar(255) DEFAULT NULL,
                         `home_img_url` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -87,8 +115,8 @@ CREATE TABLE `home` (
 -- Dumping data for table `home`
 --
 
-INSERT INTO `home` (`id`, `name`, `titre`, `titre2`, `home_img_url`) VALUES
-(1, 'home', 'PLA Development - Titre #1  -  test1 - 2', 'PLA Development - Titre #2  -  test2 - 2', 'paysage.jpg');
+INSERT INTO `home` (`id`, `name`, `titre`, `titre2`, `titre3`, `desc_titre1`, `desc_titre2`, `desc_titre3`, `home_img_url`) VALUES
+(1, 'home', 'Domaines d\'intervention', 'Prestations', 'Réalisations', NULL, NULL, NULL, 'paysage.jpg');
 
 -- --------------------------------------------------------
 
@@ -99,17 +127,18 @@ INSERT INTO `home` (`id`, `name`, `titre`, `titre2`, `home_img_url`) VALUES
 CREATE TABLE `image` (
                          `id` int(11) NOT NULL,
                          `url` varchar(255) NOT NULL,
-                         `name` varchar(255) DEFAULT NULL
+                         `name` varchar(255) DEFAULT NULL,
+                         `project_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `image`
 --
 
-INSERT INTO `image` (`id`, `url`, `name`) VALUES
-(1, 'smoothdesign.svg', 'smoothdesign'),
-(2, 'paysage.jpg', 'paysage'),
-(3, 'paysage2.jpg', 'paysage2');
+INSERT INTO `image` (`id`, `url`, `name`, `project_id`) VALUES
+(1, 'myLogo.png', 'myLogo', 1),
+(2, 'paysage.jpg', 'paysage', 2),
+(3, 'paysage2.svg', 'paysage2', 1);
 
 -- --------------------------------------------------------
 
@@ -131,10 +160,10 @@ CREATE TABLE `page` (
 --
 
 INSERT INTO `page` (`id`, `name`, `titre`, `desc_top`, `desc_bottom`, `article_id`) VALUES
-(1, 'Home', 1, '        Fort d’une longue expérience diversifiée, j’ai été amené à piloter des projets de toutes natures et dans des environnements variés.     ', '        Pour en savoir plus sur quelques exemples de projets appliqués au management de la Performance par la Qualité et l’Efficacité des Processus. END !', 1),
-(2, 'Réalisation', NULL, 'Fort d’une longue expérience diversifiée, j’ai été amené à piloter des projets de toutes natures et dans des environnements variés. ', 'Pour en savoir plus sur quelques exemples de projets appliqués au management de la Performance par la Qualité et l’Efficacité des Processus ', 2),
-(3, 'Prestation', NULL, 'La définition des projets et prestations est par nature variable en fonction du besoin. Ils feront l’objet d’un plan taillé sur mesure, pour cibler au mieux l’intervention ', 'Evaluer sa conformité aux référentiels normatifs, vérifier l’adéquation du système aux exigences des parties prenantes, ou s’assurer que l’exécution est conforme au système, est un point de départ pour l’établissement des plans d’amélioration PDCA', 1),
-(4, 'Site', NULL, 'Text haut de page	', 'Text bas de page	', NULL);
+(1, 'Home', 1, 'Fort d’une longue expérience diversifiée, j’ai été amené à piloter des projets de toutes natures et dans des environnements variés. ', 'Pour en savoir plus sur quelques exemples de projets appliqués au management de la Performance par la Qualité et l’Efficacité des Processus ', 1),
+(2, 'Réalisation', 2, 'Fort d’une longue expérience diversifiée, j’ai été amené à piloter des projets de toutes natures et dans des environnements variés. ', 'Pour en savoir plus sur quelques exemples de projets appliqués au management de la Performance par la Qualité et l’Efficacité des Processus ', 2),
+(3, 'Prestation', 2, 'La définition des projets et prestations est par nature variable en fonction du besoin. Ils feront l’objet d’un plan taillé sur mesure, pour cibler au mieux l’intervention ', 'Evaluer sa conformité aux référentiels normatifs, vérifier l’adéquation du système aux exigences des parties prenantes, ou s’assurer que l’exécution est conforme au système, est un point de départ pour l’établissement des plans d’amélioration PDCA', 1),
+(4, 'Site', 1, 'Text haut de page	', 'Text bas de page	', NULL);
 
 -- --------------------------------------------------------
 
@@ -168,11 +197,11 @@ CREATE TABLE `project` (
 --
 
 INSERT INTO `project` (`id`, `title`, `content`, `date`, `category_id`) VALUES
-(1, 'Projet #1', 'A modifier plus tard !', '2021-02-01 12:11:43', 2),
-(2, 'Projet #2 modifié', 'Text à modifier !', '2021-02-01 12:11:47', 1),
-(3, 'Projet #3', '\"\"Qui libero nihil aut dolor aliquam et obcaecati consequatur quo voluptas reprehenderit. Aut quasi ipsam non reiciendis ipsam aut velit numquam aut voluptatem impedit ut iste repellendus. Non dignissimos impedit aut perferendis neque sed distinctio minima qui molestiae quisquam. Est deleniti quia eum ratione temporibus in odio doloremque.\"\"', '2021-02-01 12:17:02', 2),
-(4, 'Mon quatrième projet', 'Ab esse atque in quibusdam eveniet ut praesentium expedita sit labore consequatur sit error recusandae non aspernatur odio? Eos beatae sapiente non laudantium facilis vel voluptatem quis et facilis enim rem repellendus molestiae.', '2021-02-01 12:19:53', 1),
-(5, 'Mon cinquième projet', 'Ea animi fugit et consequatur aspernatur id galisum quos eos dolorem illum aut ipsam praesentium est alias optio. In sapiente repellat qui quos minima et corrupti quas eos blanditiis itaque qui nihil vitae. Est quos nobis sed ipsam excepturi sed obcaecati beatae!', '2021-02-01 12:21:04', 1);
+(1, NULL, NULL, '2021-02-01 12:11:43', 2),
+(2, NULL, NULL, '2021-02-01 12:11:47', 1),
+(3, NULL, NULL, '2021-02-01 12:17:02', 2),
+(4, NULL, NULL, '2021-02-01 12:19:53', 1),
+(5, NULL, NULL, '2021-02-01 12:21:04', 1);
 
 -- --------------------------------------------------------
 
@@ -182,6 +211,7 @@ INSERT INTO `project` (`id`, `title`, `content`, `date`, `category_id`) VALUES
 
 CREATE TABLE `realisation` (
                                `id` int(11) NOT NULL,
+                               `name` varchar(100) DEFAULT NULL,
                                `titre` varchar(255) DEFAULT NULL,
                                `titre2` varchar(255) DEFAULT NULL,
                                `contenu` longtext,
@@ -192,8 +222,8 @@ CREATE TABLE `realisation` (
 -- Dumping data for table `realisation`
 --
 
-INSERT INTO `realisation` (`id`, `titre`, `titre2`, `contenu`, `home_img_url`) VALUES
-(1, 'Références', 'Réalisation', 'Fort d’une longue expérience diversifiée, j’ai été amené à piloter des projets de toutes natures et dans des environnements variés. ', 'reference.svg');
+INSERT INTO `realisation` (`id`, `name`, `titre`, `titre2`, `contenu`, `home_img_url`) VALUES
+(1, 'realisation', NULL, 'Réalisation', 'Fort d’une longue expérience diversifiée, j’ai été amené à piloter des projets de toutes natures et dans des environnements variés. ', 'reference.svg');
 
 -- --------------------------------------------------------
 
@@ -214,10 +244,9 @@ CREATE TABLE `services` (
 --
 
 INSERT INTO `services` (`id`, `title`, `content`, `imageURL`, `category_id`) VALUES
-(1, 'Focalisons sur le résultat', 'Lorem ipsum dolor sit amet. Id minima debitis ea vitae ratione ut voluptatum accusantium sit excepturi maxime aut omnis dolores. Cum quaerat ratione et odio dolorem est unde nesciunt ab explicabo dolorum! At corrupti nostrum sit omnis dolore sit veniam voluptatum rem quod aliquam. Eos inventore magnam et voluptatem saepe aut culpa nostrum est natus tempora delectus iste?', NULL, NULL),
-(2, 'L’efficacité des processus', 'Et consequuntur omnis qui explicabo quia ea laudantium voluptas aut illum amet et molestiae rerum. Ut voluptatem dignissimos aliquid illo et exercitationem aliquid sed facere repellendus. Sed accusamus nostrum non consequatur magnam id impedit placeat est necessitatibus neque aut cupiditate itaque est accusamus commodi.\r\n\r\n', NULL, NULL),
-(3, 'Système et qualité dynamique', 'Aut dolor labore est voluptatem dolorem cum quam explicabo et odit veniam rerum eius. Et molestias amet et ipsum suscipit et molestiae saepe. Ad consequatur dicta quo voluptate corporis sed alias quasi 33 voluptatibus voluptatum. Et natus voluptatem et placeat sequi ut esse doloribus in ipsa expedita ex numquam totam nam quidem perspiciatis cum dolore excepturi.', NULL, NULL),
-(7, 'Process', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', NULL, NULL);
+(1, 'Outils et méthodes', 'Les outils et méthodes tels que 8D, 5S, etc… sont utilisés spécifiquement pour la résolution de problèmes et l’amélioration continue', 'paysage.jpg', NULL),
+(2, 'Système Qualité', NULL, 'paysage.jpg', NULL),
+(3, 'Efficacité', NULL, 'paysage.jpg', NULL);
 
 -- --------------------------------------------------------
 
@@ -232,15 +261,16 @@ CREATE TABLE `site` (
                         `imgURL_home_page` varchar(255) DEFAULT NULL,
                         `desc_top_home_page` varchar(255) DEFAULT NULL,
                         `desc_bottom_home_page` varchar(255) DEFAULT NULL,
-                        `home_presentation` longtext
+                        `home_presentation` longtext,
+                        `home_presentation_2` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `site`
 --
 
-INSERT INTO `site` (`id`, `name`, `title_home_page`, `imgURL_home_page`, `desc_top_home_page`, `desc_bottom_home_page`, `home_presentation`) VALUES
-(1, 'site', 'PLA Development', 'assets/background/paysage.jpg', 'Text haut de page', 'Text bas de page', '            Accomplished leader to achieve Business transformation, with recorded experience of transformation and process efficiency, Customer projects, products/offer development. Agile and lean minded by experience and personal taste, I like to use Customers and Employees insights to provide a meaningful direction in the projects. Enthusiastic, engaged and well coached teams will deliver far beyond expectations.\r\n\r\nI got responsibilities and exposures in small and large organizations, as operational, functional manager, or community leader. Technology and industrial companies are my playground ; sports are my inspiration to deliver while managing my resources\r\n        ');
+INSERT INTO `site` (`id`, `name`, `title_home_page`, `imgURL_home_page`, `desc_top_home_page`, `desc_bottom_home_page`, `home_presentation`, `home_presentation_2`) VALUES
+(1, 'site', 'PLA Development', 'assets/background/paysage.jpg', 'Text haut de page', 'Text bas de page', 'Ma description UN!', 'Ma description DOS !               ');
 
 -- --------------------------------------------------------
 
@@ -251,6 +281,7 @@ INSERT INTO `site` (`id`, `name`, `title_home_page`, `imgURL_home_page`, `desc_t
 CREATE TABLE `titre` (
                          `id` int(11) NOT NULL,
                          `libelle` varchar(255) DEFAULT NULL,
+                         `name` varchar(255) DEFAULT NULL,
                          `page_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -258,11 +289,11 @@ CREATE TABLE `titre` (
 -- Dumping data for table `titre`
 --
 
-INSERT INTO `titre` (`id`, `libelle`, `page_id`) VALUES
-(1, 'LALA', 1),
-(2, 'NANA', 1),
-(3, 'Titre #3', 2),
-(4, 'CHOCO', 1);
+INSERT INTO `titre` (`id`, `libelle`, `name`, `page_id`) VALUES
+(1, 'LALA', 'titre1', 1),
+(2, 'NANA', 'titre2', 1),
+(3, 'Titre #3', 'titre3', 2),
+(4, 'CHOCO', 'titre3', 1);
 
 -- --------------------------------------------------------
 
@@ -315,6 +346,12 @@ ALTER TABLE `article_contact`
     ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `assoc_titre`
+--
+ALTER TABLE `assoc_titre`
+    ADD PRIMARY KEY (`page_id`,`titre_id`);
+
+--
 -- Indexes for table `home`
 --
 ALTER TABLE `home`
@@ -339,9 +376,21 @@ ALTER TABLE `prestation`
     ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `project`
+--
+ALTER TABLE `project`
+    ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `realisation`
 --
 ALTER TABLE `realisation`
+    ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `services`
+--
+ALTER TABLE `services`
     ADD PRIMARY KEY (`id`);
 
 --
@@ -382,7 +431,7 @@ ALTER TABLE `article`
 -- AUTO_INCREMENT for table `article_contact`
 --
 ALTER TABLE `article_contact`
-    MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+    MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `home`
@@ -409,10 +458,22 @@ ALTER TABLE `prestation`
     MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT for table `project`
+--
+ALTER TABLE `project`
+    MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
 -- AUTO_INCREMENT for table `realisation`
 --
 ALTER TABLE `realisation`
     MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `services`
+--
+ALTER TABLE `services`
+    MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `site`

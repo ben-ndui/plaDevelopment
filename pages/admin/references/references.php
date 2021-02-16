@@ -24,94 +24,78 @@ $projects = $projectTable->getProjectIMG();
 $form = new Form($pages);
 
 if(!empty($_POST)){
-    /*foreach($_POST['id'] as $key=>$value) {
-        $post[$key]= $value;
-        /*$result = $projectTable->update(
-            $key,
-            [
-                'title' => $_POST['title'],
-                'content' => $_POST['content'],
-            ]
-        );*/
-        /*$result = $realisationTable->update($key, [
-                'titre' => $_POST['titre'],
-                'titre2' => $_POST['titre2']
-            ]
-        );*
-    }*/
+    $res = save($_POST['id'], "title", "content", '',$projectTable);
+    $res = save($_POST['realisation'], 'contenu','titre', 'titre2',$realisationTable, true);
 
+    if($res){
+        header('Location: admin.php?page=reference.param');
+    }
 
-    /*$result = $realisationTable->update($_POST['id'], [
-            'titre' => $_POST['titre'],
-            'titre2' => $_POST['titre2']
-        ]
-    );
+}
 
-    $result = $pagesTable->update(
-        $_POST['id'],
-        [
-            'desc_top' => $_POST['desc_top'],
-            'desc_bottom' => $_POST['desc_bottom'],
-        ]
-    );
+function save($postTable, $field1, $field2, $field3, $uneTable, $real = false){
+    $post = Array();
+    foreach($postTable as $key=>$value) {
+        $post[$key] = $value;
+    }
+    $tab[][] = Array();
+    $i = 1;
+    $j = 0;
+    $l = 0;
+    foreach($post as $p) {
+        $tab[$i][$j] = $p;
+        $j++;
+        $l++;
+        if ($l == 5) {
+            $i++;
+            $j = 0;
+            $l = 0;
+        }
+    }
+    for ($i = 1; $i < count($tab); $i++){
+        switch ($real){
+            case false:
+                $uneTable->update(
+                    $i,
+                    [
+                        $field1 => $tab[$i][3],
+                        $field2 => $tab[$i][4],
+                    ]
+                );
+                break;
+            case true:
+                $uneTable->update(
+                    $i,
+                    [
+                        $field1 => $tab[$i][0],
+                        $field2 => $tab[$i][1],
+                        $field3 => $tab[$i][2],
+                    ]
+                );
+                break;
+        }
 
-    $result = $projectTable->update(
-        $_POST['id'],
-        [
-            'title' => $_POST['title'],
-            'content' => $_POST['content'],
-            'website_link' => $_POST['website_link'],
-            'contact_by' => $_POST['contact_by'],
-        ]
-    );*/
-
-    /*if($result){
-        header('Location: /admin.php?page=reference.param');
-    }*/
+    }
+    return true;
 }
 
 ?>
 <br>
-<pre>
-    <?php
-        $post = array();
-        for($i = 0; $i < count($_POST); $i++) {
-            for($j = 0; $j < 5; $j++) {
-                $post[$i][$j] = $_POST[$j];
-            }
-            /*foreach ($_POST['id'] as $key => $value) {
-                $post[$i][$key] = $value;
-                /*$result = $projectTable->update(
-                    $key,
-                    [
-                        'title' => $_POST['title'],
-                        'content' => $_POST['content'],
-                    ]
-                );*/
-                /*$result = $realisationTable->update($key, [
-                        'titre' => $_POST['titre'],
-                        'titre2' => $_POST['titre2']
-                    ]
-                );
-            }*/
-        }
-        print_r($post);
-    ?>
-</pre>
 
 <form method="post" class="form-ref">
     <section class="container">
 
         <p class="text-pres text-pres-service">
-            <input name="desc_top" value="<?= $realisation->desc_top; ?>">
+            <input name="realisation[]" value="<?= $realisation->contenu; ?>">
         </p>
 
-        <h1 class="title-strong"><input name="titre2" value="<?= $realisation->titre2; ?>"></h1>
+        <h1 class="title-strong"><input name="realisation[]" value="<?= $realisation->titre; ?>"></h1>
 
-        <p class="text-pres"><input name="desc_bottom" value="<?= $realisation->desc_bottom; ?>"></p>
+        <p class="text-pres"><input name="realisation[]" value="<?= $realisation->titre2; ?>"></p>
 
         <?php foreach ($projects as $proj):?>
             <input type="hidden" name="id[]" value="<?= $proj->id; ?>">
+            <input type="hidden" name="realisation[]" value="<?= $proj->id; ?>">
 
             <div class="my-element">
                 <div src="" class="my-element-elem my-element-elem-left">

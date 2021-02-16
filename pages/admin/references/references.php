@@ -12,6 +12,7 @@ $realisation = $app->getTable('Realisation')->findWithName('Réalisation');
 $pagesTable = $app->getTable('Page');
 $site = $app->getTable('site');
 $realisationTable = $app->getTable('Realisation');
+$artContactTable = $app->getTable('Article_contact');
 $rea = $realisationTable->all();
 
 $pages = $app->getTable('Page')->getPage('realisation');
@@ -26,6 +27,7 @@ $form = new Form($pages);
 if(!empty($_POST)){
     $res = save($_POST['id'], "title", "content", '',$projectTable);
     $res = save($_POST['realisation'], 'contenu','titre', 'titre2',$realisationTable, true);
+    $res = save($_POST['realisation'], 'contenu','titre', 'titre2', $artContactTable);// IL TE RESTE CELUI LA A FAIRE
 
     if($res){
         header('Location: admin.php?page=reference.param');

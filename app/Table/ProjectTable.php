@@ -42,6 +42,20 @@ class ProjectTable extends Table {
     }
 
     /**
+     * @param $category_id
+     * @return mixed
+     */
+    public function getProjectIMG(){
+
+        return $this->query("
+            SELECT *
+            FROM project
+            INNER JOIN article_contact on project.id = article_contact.project_id"
+        );
+
+    }
+
+    /**
      * Récuprère un projet en liant la categorie associé
      * @return \SmoothDesign\Entity\ProjectEntity
      */

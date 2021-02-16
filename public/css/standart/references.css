@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+:root{
+    /* COULEUR ORANGE */
+    --globalOrange: #FF6100;
+    --globalOrangeRGB: rgba(255, 97, 0, 1) ;
+    --light-varianteOrange: #FFA46E;
+    --ultra-light-orange: #FFC4AA;
+
+    /* BLANC et BLANC CASSE */
+    --my-white: #FFFFFF;
+    --my-weight-white: #E4E4E4;
+
+    --background-color: #F6F6F6;
+
+    /* BLACK et GREY */
+    --my-black: #202020;
+    --my-grey: #EFEFEF;
+    --my-light-grey: #B1B1B1;
+
+    --text-color-theme : #FA5F02;
+}
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Quicksand;
+}
+
+.my-element{
+    display: flex;
+    flex-direction: row;
+    width: 84%;
+    margin: 50px auto;
+    /*border: 1px solid red;/**/
+}
+
+.my-element-elem{
+    width: 300px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--globalOrange);
+}
+
+.my-element-elem .my-img{
+    width: 50px;
+    height: 50px;
+    border: 1px solid blue;
+}
+
+.my-element-elem h2{
+    margin-bottom: 20px;
+}
+
+.my-element-elem-left{
+    /*border: 1px solid red;/**/
+}
+
+.my-element-elem-left .left-elem{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+}
+
+.my-element-elem-right{
+    flex: 1 1 200px;
+}

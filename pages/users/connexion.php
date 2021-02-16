@@ -24,12 +24,14 @@ $form = new Form($_POST);
 
 
 ?>
-    <?php include ROOT . '/pages/templates/partials/connexion-header.php'; ?>
+    <?php include ROOT . '/pages/templates/partials/headers/connexion-header.php'; ?>
 
-    <form class="form" method="post">
-        <?= $form->input("identifiant", ['password'=>'text', 'classname'=>'input input-id', 'plholder'=>'Identifiant']); ?>
-        <?= $form->input("password", ['type'=>'password', 'classname'=>'input input-pwd', 'plholder'=>'********']); ?>
-        <?= $form->submit('Me connecter', "input input-submit"); ?>
-    </form>
+    <div class="container container-connexion">
+        <form class="form" method="post">
+            <?= $form->input("identifiant", ['password'=>'text', 'classname'=>'input input-id', 'plholder'=>'Identifiant']); ?>
+            <?= $form->input("password", ['type'=>'password', 'classname'=>'input input-pwd', 'plholder'=>'********']); ?>
+            <?= $form->submit('Me connecter', "input input-submit"); ?>
+        </form>
+    </div>
 
 

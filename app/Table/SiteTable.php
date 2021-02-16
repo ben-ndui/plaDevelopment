@@ -8,4 +8,5 @@ use Core\Table\Table;
 
 class SiteTable extends Table{
     protected $table = "site";
+
 }

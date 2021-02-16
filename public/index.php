@@ -9,22 +9,24 @@ App::load();
 if(isset($_GET['page'])){
     $page = $_GET['page'];
 }else{
-    $page = 'home';
+    $page = 'homeTable';
 }
 
 
 ob_start();
 
-if($page === 'home'){
+if($page === 'homeTable'){
     require ROOT . '/pages/home.php';
 }elseif ($page === 'project'){
     require ROOT . '/pages/single.php';
-}elseif ($page === 'services'){
+}elseif ($page === 'realisation'){
     require ROOT . '/pages/service.php';
 }elseif ($page === 'contact'){
     require ROOT . '/pages/contact.php';
 }elseif ($page === 'connexion'){
     require ROOT . '/pages/users/connexion.php';
+}elseif ($page === 'references'){
+    require ROOT . '/pages/references.php';
 }
 
 $content = ob_get_clean();

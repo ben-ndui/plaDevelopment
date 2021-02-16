@@ -136,6 +136,11 @@ only screen and (hover: none) {
         font-size: 20px;
     }
 
+
+    .title-strong{
+        font-size: x-large;
+    }
+
     .menu{
         display: none;
     }

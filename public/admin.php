@@ -10,7 +10,7 @@ App::load();
 if(isset($_GET['page'])){
     $page = $_GET['page'];
 }else{
-    $page = 'home';
+    $page = 'homeTable';
 }
 
 
@@ -23,7 +23,7 @@ if(!$auth->logged()){
 }
 
 ob_start();
-if($page === 'home'){
+if($page === 'homeTable'){
     require ROOT . '/pages/admin/dashboard/dashboard.php';
 }elseif ($page === 'project.param'){//PROJECTS
     require ROOT . '/pages/admin/project/index.php';
@@ -55,6 +55,10 @@ if($page === 'home'){
     require ROOT . '/pages/admin/apparence/edit.php';
 }elseif ($page === 'connexion'){//CONNEXION
     require ROOT . '/pages/users/connexion.php';
+} elseif ($page === 'home.param'){//HOME Edit
+    require ROOT . '/pages/admin/home/index.php';
+}elseif ($page === 'reference.param'){//REFERENCE Edit
+    require ROOT . '/pages/admin/references/references.php';
 }
 
 $content = ob_get_clean();

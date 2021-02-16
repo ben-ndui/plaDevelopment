@@ -1,12 +1,16 @@
 <?php
 
-    $app = App::getInstance();
+$app = App::getInstance();
 
-    $app->title = "ADMINISTRATION PLA";
+$app = App::getInstance();
+$realisation = $app->getTable('Realisation')->findWithName('Réalisation');
 
-    $apparence = $app->getTable('Site')->find(1);
+$services = $app->getTable('Services')->all();
+$service = $app->getTable('Services')->find(2);
+$apparence = $app->getTable('Site')->find(1);
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,21 +22,14 @@
     <meta name="Ben NDUI" content="">
     <link rel="stylesheet" href="css/standart/general_style.css">
     <link rel="stylesheet" href="css/mobile_style/mobile-standart.css">
+    <link rel="stylesheet" href="css/standart/references.css">
 </head>
 <body>
 
 <div class="container">
 
-    <header class="my-header">
-        <img src="<?= $apparence->imgURL_home_page;?>">
-
+    <header class="my-header header-pages header-reference">
+        <img src="<?= "assets/background/" . $realisation->home_img_url;?>">
         <?php include 'components/nav-widget.php'; ?>
-
-        <div class="logo-and-title">
-            <h1 class="link">
-                LA <span class="surbrillance">PERFORMANCE</span>
-                PAR <span class="surbrillance">L'EFFICACITE</span> DES <span class="surbrillance">PROCESSUS</span>
-            </h1>
-        </div>
 
     </header>

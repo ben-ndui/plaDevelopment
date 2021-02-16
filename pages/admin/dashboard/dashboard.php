@@ -46,7 +46,7 @@
     <aside class="sidenav">
         <div class="sidenav__brand">
             <i class="fas fa-feather-alt sidenav__brand-icon"></i>
-            <a class="sidenav__brand-link" href="index.php?page=home">PLA<span class="text-light"> Development</span></a>
+            <a class="sidenav__brand-link" href="/">PLA<span class="text-light"> Development</span></a>
             <i class="fas fa-times sidenav__brand-close"></i>
         </div>
         <div class="sidenav__profile">
@@ -132,7 +132,7 @@
                         <i class="far fa-file-alt"></i>
                     </div>
                     <div class="overviewCard-description">
-                        <h3 class="overviewCard-title text-light">Créer / Modifier une <strong>Page projet</strong></h3>
+                        <h3 class="overviewCard-title text-light">Modifier / Céer une <strong>Page projet</strong></h3>
                     </div>
                 </div>
             </a>
@@ -143,7 +143,51 @@
                         <i class="far fa-calendar-check"></i>
                     </div>
                     <div class="overviewCard-description">
-                        <h3 class="overviewCard-title text-light">Créer / Modifier une <strong>Page services</strong></h3>
+                        <h3 class="overviewCard-title text-light">Modifier / Créer une <strong>Page services</strong></h3>
+                    </div>
+                </div>
+            </a>
+
+            <a href="?page=home.param">
+                <div class="overviewCard">
+                    <div class="overviewCard-icon overviewCard-icon--calendar">
+                        <i class="far fa-calendar-check"></i>
+                    </div>
+                    <div class="overviewCard-description">
+                        <h3 class="overviewCard-title text-light">Modifier la <strong>Page d'accueil</strong></h3>
+                    </div>
+                </div>
+            </a>
+
+            <a href="?page=reference.param">
+                <div class="overviewCard">
+                    <div class="overviewCard-icon overviewCard-icon--calendar">
+                        <i class="far fa-calendar-check"></i>
+                    </div>
+                    <div class="overviewCard-description">
+                        <h3 class="overviewCard-title text-light">Modifier la <strong>Page Références</strong></h3>
+                    </div>
+                </div>
+            </a>
+
+            <a href="?page=realisation.param">
+                <div class="overviewCard">
+                    <div class="overviewCard-icon overviewCard-icon--calendar">
+                        <i class="far fa-calendar-check"></i>
+                    </div>
+                    <div class="overviewCard-description">
+                        <h3 class="overviewCard-title text-light">Modifier la <strong>Page Réalisations</strong></h3>
+                    </div>
+                </div>
+            </a>
+
+            <a href="?page=contact.param">
+                <div class="overviewCard">
+                    <div class="overviewCard-icon overviewCard-icon--calendar">
+                        <i class="far fa-calendar-check"></i>
+                    </div>
+                    <div class="overviewCard-description">
+                        <h3 class="overviewCard-title text-light">Modifier la <strong>Page Contacts</strong></h3>
                     </div>
                 </div>
             </a>

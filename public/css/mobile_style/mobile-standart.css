@@ -53,6 +53,14 @@
     .menu-contact{
         display: block;
     }
+
+    .btn-p {
+        padding: 45px 25px 50px 130px;
+    }
+
+    .my-delete{
+        margin-right: -37px;
+    }
 }
 
 @media (max-width: 37.5em) {
@@ -236,6 +244,10 @@ only screen and (hover: none) {
 
     .more-infos .more-infos-elem .more-infos-elem-img{
         margin-right: 10px;
+    }
+
+    .btn-p {
+        padding: 45px 25px 50px 130px;
     }
 
 }

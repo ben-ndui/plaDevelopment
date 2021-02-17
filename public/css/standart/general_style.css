@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
-:root{
+:root {
     /* COULEUR ORANGE */
     --globalOrange: #FF6100;
-    --globalOrangeRGB: rgba(255, 97, 0, 1) ;
+    --globalOrangeRGB: rgba(255, 97, 0, 1);
     --light-varianteOrange: #FFA46E;
     --ultra-light-orange: #FFC4AA;
 
@@ -18,32 +18,31 @@
     --my-grey: #EFEFEF;
     --my-light-grey: #B1B1B1;
 
-    --text-color-theme : #FA5F02;
+    --text-color-theme: #FA5F02;
 }
 
 
-
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Quicksand;
 }
 
-pre{
+pre {
     color: #FF6100;
 }
 
-body, html{
+body, html {
     width: 100%;
     overflow-x: hidden;
 }
 
-h1, h2, h3, h4, h5{
+h1, h2, h3, h4, h5 {
     color: var(--text-color-theme);
 }
 
-.container{
+.container {
     position: relative;
     width: 100%;
     overflow-x: hidden;
@@ -55,7 +54,7 @@ h1, h2, h3, h4, h5{
 ** Mise en forme du header  *
  ****************************/
 
-.my-header{
+.my-header {
     overflow: hidden;
     position: relative;
     color: white;
@@ -67,7 +66,7 @@ h1, h2, h3, h4, h5{
     /*border: 1px solid red;/**/
 }
 
-.my-header img{
+.my-header img {
     position: absolute;
     object-fit: cover;
     width: 100%;
@@ -76,22 +75,22 @@ h1, h2, h3, h4, h5{
     z-index: 0;
 }
 
-.header-pages{
+.header-pages {
     height: 60vh;
 }
 
-.header-reference{
+.header-reference {
     background-size: contain;
 }
 
-.my-header .logo-and-title{/*Block contenant le logo et le titre de la page d'accueil*/
+.my-header .logo-and-title { /*Block contenant le logo et le titre de la page d'accueil*/
     position: absolute;
     top: 80%;
     left: 50%;
     transform: translate(-50%, -60%);
 }
 
-.logo{
+.logo {
     position: absolute;
     color: #FF6100;
     width: 60px;
@@ -106,7 +105,7 @@ h1, h2, h3, h4, h5{
     /*border: 1px solid red;/**/
 }
 
-.my-header .header-nav-bar{
+.my-header .header-nav-bar {
     position: fixed;
     width: 100%;
     color: var(--text-color-theme);
@@ -115,7 +114,7 @@ h1, h2, h3, h4, h5{
     z-index: 10;
 }
 
-.my-header .header-nav-bar .header-nav-bar-humburger{
+.my-header .header-nav-bar .header-nav-bar-humburger {
     display: none;
     width: 30px;
     height: 30px;
@@ -126,7 +125,7 @@ h1, h2, h3, h4, h5{
     transition: all .2s ease-in-out;
 }
 
-.my-header .header-nav-bar .header-nav-bar-humburger .humburger-bar{
+.my-header .header-nav-bar .header-nav-bar-humburger .humburger-bar {
     width: 100%;
     height: 4px;
     margin-top: 3px;
@@ -134,22 +133,22 @@ h1, h2, h3, h4, h5{
     border-radius: 100px;
 }
 
-.my-header .header-nav-bar .header-nav-bar-humburger .humburger-bar-sec{
+.my-header .header-nav-bar .header-nav-bar-humburger .humburger-bar-sec {
     width: 50%;
 }
 
-.my-header .header-nav-bar .header-nav-bar-humburger:hover{
+.my-header .header-nav-bar .header-nav-bar-humburger:hover {
     cursor: pointer;
     width: 35px;
     height: 35px;
 }
 
-.header-nav-bar .menu-coulissant{
+.header-nav-bar .menu-coulissant {
     display: none;
     transition: all .5s ease-in-out;
 }
 
-.header-nav-bar .menu-coulissant li a{
+.header-nav-bar .menu-coulissant li a {
     color: #FF6100;
 }
 
@@ -157,11 +156,11 @@ h1, h2, h3, h4, h5{
 ** MENU BAR  **
  **************/
 
-.menu{
+.menu {
     float: right;
 }
 
-.menu ul li{
+.menu ul li {
     list-style-type: none;
     float: left;
     padding: 20px;
@@ -170,18 +169,18 @@ h1, h2, h3, h4, h5{
     /*border: 1px solid blue;/**/
 }
 
-.menu ul li a{
+.menu ul li a {
     color: var(--text-color-theme);
     transition: all .2s ease-in-out;
 }
 
-.menu ul li:hover > a{
+.menu ul li:hover > a {
     padding: 5px;
-    background: linear-gradient(rgba(255,97,0, .2), rgba(255,97,0, .2)) left/0% 100% no-repeat;
+    background: linear-gradient(rgba(255, 97, 0, .2), rgba(255, 97, 0, .2)) left/0% 100% no-repeat;
     animation: anime 2s ease-in-out infinite alternate;
 }
 
-.menu ul li:hover{
+.menu ul li:hover {
     background-color: var(--my-white);
 }
 
@@ -189,11 +188,11 @@ h1, h2, h3, h4, h5{
 ** Mise en forme du formulaire  *
  ********************************/
 
-.container-connexion{
+.container-connexion {
     height: 100vh;
 }
 
-.container > .form{
+.container > .form {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -208,11 +207,11 @@ h1, h2, h3, h4, h5{
     /*border: 1px solid red;/**/
 }
 
-.container > .form > p{
+.container > .form > p {
     width: 100%;
 }
 
-.container .form > p .input{
+.container .form > p .input {
     outline: none;
     border: none;
     width: 90%;
@@ -224,7 +223,7 @@ h1, h2, h3, h4, h5{
     background: rgba(242, 242, 242, .5);
 }
 
-.container > .form > p .input-submit{
+.container > .form > p .input-submit {
     position: absolute;
     width: 200px;
     color: var(--my-white);
@@ -233,11 +232,11 @@ h1, h2, h3, h4, h5{
     background: var(--globalOrange);
     transform: translate(-40%, 0);
     border-radius: 100px;
-    box-shadow: 0 0 3px 2px rgba(242,242,242,.5);
+    box-shadow: 0 0 3px 2px rgba(242, 242, 242, .5);
     transition: all .5s ease-in-out;
 }
 
-.container > .form > p .input-submit:hover{
+.container > .form > p .input-submit:hover {
     cursor: pointer;
     color: var(--text-color-theme);
     background: var(--my-white);
@@ -248,7 +247,7 @@ h1, h2, h3, h4, h5{
 ***   SERVICES DESIGN   ***
  **************************/
 
-.container-service{
+.container-service {
     width: 100%;
     height: auto;
     padding-top: 30px;
@@ -272,13 +271,13 @@ h1, h2, h3, h4, h5{
     position: absolute;
     width: 100%;
     height: 100%;
-    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     transition: transform 1s;
     transform-style: preserve-3d;
 }
 
 .card:hover .content {
-    transform: rotateY( 180deg ) ;
+    transform: rotateY(180deg);
     transition: transform 0.5s;
 }
 
@@ -295,7 +294,7 @@ h1, h2, h3, h4, h5{
     backface-visibility: hidden;
 }
 
-.front .img{
+.front .img {
     height: 100%;
     /*border: 1px solid red;/**/
     border-radius: 4px;
@@ -303,7 +302,7 @@ h1, h2, h3, h4, h5{
     background-repeat: no-repeat;
 }
 
-.front h3{
+.front h3 {
     margin-top: -50%;
     color: #FFFFFF;
 }
@@ -312,15 +311,15 @@ h1, h2, h3, h4, h5{
     background: var(--globalOrange);
     color: var(--my-white);
     padding-bottom: 4px;
-    transform: rotateY( 180deg );
+    transform: rotateY(180deg);
     overflow-y: hidden;
 }
 
-.back h3{
+.back h3 {
     margin-top: 10px;
 }
 
-.back p{
+.back p {
     width: 100%;
     padding: 10px;
     font-size: 14px;
@@ -333,7 +332,7 @@ h1, h2, h3, h4, h5{
 /**********************************************************************
 ** MISE EN FORME DE LA PRESENTATION DE PATRICE LARMOYER sur HOMEPAGE **
  **********************************************************************/
-.container-home-presentation{
+.container-home-presentation {
     padding: 50px;
     height: auto;
     margin: 50px auto;
@@ -342,31 +341,31 @@ h1, h2, h3, h4, h5{
     background-color: var(--my-grey);
 }
 
-.home-elem{
+.home-elem {
     /*border: 1px solid red;/**/
     display: inline-block;
     margin: 20px;
     vertical-align: top;
     border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     background: #FFFFFF;
 }
 
-.home-elem-image{
+.home-elem-image {
     width: 20vw;
     height: auto;
     padding: 4px;
     background: var(--my-white);
 }
 
-.home-elem-image img{
+.home-elem-image img {
     width: 100%;
     height: 100%;
     image-resolution: from-image;
     border-radius: 10px;
 }
 
-.home-elem-desc-all{
+.home-elem-desc-all {
     width: 30vw;
     padding: 49px;
     text-align: justify;
@@ -379,14 +378,14 @@ h1, h2, h3, h4, h5{
 ** MISE EN FORME DU PREMIER STYLE DE PAGE SERVICE || PROJECT  **
  ***************************************************************/
 
-.container-service-type-one{
+.container-service-type-one {
     /*border: 1px solid green;/**/
     padding: 30px;
     height: 100vh;
     text-align: center;
 }
 
-.container-service-type-one .section{
+.container-service-type-one .section {
     padding: 5px;
     overflow-y: scroll;
     overflow-x: hidden;
@@ -402,7 +401,7 @@ h1, h2, h3, h4, h5{
     box-shadow: 0 0 4px 2px rgba(150, 150, 150, .2);
 }
 
-.container-service-type-one .section ul{
+.container-service-type-one .section ul {
     /*border: 1px solid purple;/**/
     padding: 10px;
     background: var(--my-white);
@@ -410,7 +409,7 @@ h1, h2, h3, h4, h5{
     border-radius: 20px;
 }
 
-.container-service-type-one .section ul li{
+.container-service-type-one .section ul li {
     list-style-type: none;
     font-size: 20px;
     padding: 20px;
@@ -418,19 +417,19 @@ h1, h2, h3, h4, h5{
     /*border: 1px solid blue;/**/
 }
 
-.container-service-type-one .section ul li a{
+.container-service-type-one .section ul li a {
     text-decoration: none;
     color: var(--text-color-theme);
 }
 
-.container-service-type-one .section ul li:hover > .container-service-type-one .section ul::after{
+.container-service-type-one .section ul li:hover > .container-service-type-one .section ul::after {
     content: "";
     width: 10px;
     height: 3px;
 }
 
-.container-service-type-one .section ul li:hover{
-    background: linear-gradient(rgba(255,97,0, .2), rgba(255,97,0, .2)) left/0% 100% no-repeat;
+.container-service-type-one .section ul li:hover {
+    background: linear-gradient(rgba(255, 97, 0, .2), rgba(255, 97, 0, .2)) left/0% 100% no-repeat;
     animation: anime 2s ease-in-out infinite alternate;
     border-bottom: 1px solid var(--globalOrange);
 }
@@ -439,16 +438,16 @@ h1, h2, h3, h4, h5{
 ** TABLE ADMIN  **
  *************************/
 
-.my-card-container{
+.my-card-container {
     display: block;
     width: 80%;
     margin: 50px auto;
     text-align: center;
     background: var(--my-white);
-    box-shadow: 0 2px 4px rgba(100,100,100,.1);
+    box-shadow: 0 2px 4px rgba(100, 100, 100, .1);
 }
 
-.top-of-my-card{
+.top-of-my-card {
     color: var(--my-white);
     width: 100%;
     padding: 5px;
@@ -456,7 +455,7 @@ h1, h2, h3, h4, h5{
     background: var(--globalOrange);
 }
 
-.my-delete{
+.my-delete {
     float: right;
     width: 30px;
     height: 30px;
@@ -467,11 +466,11 @@ h1, h2, h3, h4, h5{
     border-radius: 50px;
     text-align: center;
     border: 1px solid var(--globalOrange);
-    box-shadow: 0 2px 4px rgba(100,100,100,.1);
+    box-shadow: 0 2px 4px rgba(100, 100, 100, .1);
     transition: all .2s ease-in-out;
 }
 
-.my-delete:hover{
+.my-delete:hover {
     width: 35px;
     height: 35px;
     background: red;
@@ -479,30 +478,30 @@ h1, h2, h3, h4, h5{
     border: none;
 }
 
-.edit-btn{
+.edit-btn {
     text-decoration: none;
     float: right;
     color: var(--my-white);
     transition: all .2s ease-in-out;
 }
 
-.edit-btn:hover{
+.edit-btn:hover {
     font-size: 20px;
 }
 
-.card-description{
+.card-description {
     padding: 30px;
     text-align: justify;
 }
 
-.my-submit{
+.my-submit {
     outline: none;
     border: none;
     background: transparent;
     color: var(--my-white);
 }
 
-.submit{
+.submit {
     position: relative;
     border: none;
     outline: none;
@@ -514,7 +513,7 @@ h1, h2, h3, h4, h5{
     transition: all .3s ease-in-out;
 }
 
-.submit:hover{
+.submit:hover {
     color: white;
     background-color: var(--globalOrange);
 }
@@ -523,23 +522,23 @@ h1, h2, h3, h4, h5{
 ** Link and stuff design  **
  ***************************/
 
-.title-strong{
+.title-strong {
     font-size: 50px;
     text-align: left;
     margin: 50px auto;
     padding-left: 7.5%;
 }
 
-.link{
+.link {
     color: white;
     text-decoration: none;
 }
 
-.surbrillance{
+.surbrillance {
     color: var(--ultra-light-orange);
 }
 
-.text-pres{
+.text-pres {
     text-align: justify;
     padding: 10px;
     margin: 50px auto;
@@ -547,19 +546,19 @@ h1, h2, h3, h4, h5{
     font-size: 23px;
 }
 
-.text-pres-service{
+.text-pres-service {
     width: 80%;
     font-size: 20px;
     margin: 5% 10% 5% auto;
 }
 
 
-.btn-p{
+.btn-p {
     padding: 50px 50px 50px 130px;
     /*border: 1px solid blue;/**/
 }
 
-.button{
+.button {
     text-decoration: none;
     text-align: center;
     padding: 10px;
@@ -570,7 +569,7 @@ h1, h2, h3, h4, h5{
     border-radius: 4px;
 }
 
-.button:hover{
+.button:hover {
     border: none;
     color: var(--my-white);
     background: var(--globalOrange);
@@ -579,18 +578,18 @@ h1, h2, h3, h4, h5{
 /****************************
 **      FORM DESIGN        **
  ****************************/
-.form-edit{
+.form-edit {
     width: 90%;
     margin: 50px auto;
     padding: 10px;
-    box-shadow: 0 2px 4px rgba(100,100,100,.1);
+    box-shadow: 0 2px 4px rgba(100, 100, 100, .1);
 }
 
-.form-ref .my-element-elem{
+.form-ref .my-element-elem {
     border-bottom: 1px solid rgba(100, 100, 100, .1);
 }
 
-input, textarea, select{
+input, textarea, select {
     outline: none;
     font-size: 18px;
     width: 100%;
@@ -600,11 +599,11 @@ input, textarea, select{
     border-bottom: 1px solid var(--globalOrange);
 }
 
-textarea{
+textarea {
     height: 300px;
 }
 
-select{
+select {
     width: 200px;
     padding: 20px;
 }
@@ -613,7 +612,7 @@ select{
 ** FOOTER  **
  ************/
 
-.main-footer{
+.main-footer {
     /*border: 1px solid red;/**/
     width: 100vw;
     height: auto;
@@ -623,7 +622,7 @@ select{
     background: var(--globalOrange);
 }
 
-.main-footer > .footer-elem{
+.main-footer > .footer-elem {
     position: relative;
     display: inline-block;
     vertical-align: top;
@@ -635,22 +634,20 @@ select{
     /*border: 1px solid blue;/**/
 }
 
-.main-footer > .footer-elem li{
+.main-footer > .footer-elem li {
     list-style-type: none;
     margin: 15px auto;
     font-size: 20px;
 }
 
-.main-footer > .footer-elem-social{
+.main-footer > .footer-elem-social {
     text-align: center;
 }
 
-.main-footer > .footer-elem-social .social{
+.main-footer > .footer-elem-social .social {
     display: inline-block;
     margin: 10px;
 }
-
-
 
 
 /*************************

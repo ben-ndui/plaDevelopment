@@ -31,7 +31,7 @@ $form = new Form($user);
         <?= $form->input("username", ['type'=>'text', 'classname'=>'edit edit-title']); ?>
         <?= $form->input("lastname", ['type'=>'text', 'classname'=>'edit edit-title']); ?>
         <?= $form->input("password", ['type'=>'password', 'classname'=>'edit edit-title']); ?>
-        <?= $form->submit('Sauvegarder', "edit-submit"); ?>
+        <?= $form->submit('Sauvegarder', "submit edit-submit"); ?>
     </form>
 
 </div>

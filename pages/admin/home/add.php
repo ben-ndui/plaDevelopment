@@ -4,7 +4,6 @@ use Core\HTML\Form;
 $app = App::getInstance();
 
 $projectTable = $app->getTable('Project');
-$categoryTable = $app->getTable('Category')->extractList('id', 'title');
 
 if(!empty($_POST)){
     $result = $projectTable->create(
@@ -22,7 +21,6 @@ if(!empty($_POST)){
         header('Location: admin.php?page=project.edit&id='. $app->getDb()->lastInsertId());
     }
 }
-$category = $app->getTable('Category')->all();
 
 $form = new Form($_POST);
 
@@ -34,7 +32,6 @@ $form = new Form($_POST);
     <form class="form-edit" method="post">
         <?= $form->input("title", ['type'=>'text', 'classname'=>'edit edit-title']); ?>
         <?= $form->input("content", ['type'=>'textarea', 'classname'=>'edit edit-content']); ?>
-        <?= $form->select("category_id", $categoryTable); ?>
         <?= $form->submit('Sauvegarder', "submit"); ?>
     </form>
 

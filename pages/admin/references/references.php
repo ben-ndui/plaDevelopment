@@ -11,23 +11,25 @@ $realisation = $app->getTable('Realisation')->findWithName('Réalisation');
  */
 $pagesTable = $app->getTable('Page');
 $site = $app->getTable('site');
+
 $realisationTable = $app->getTable('Realisation');
 $artContactTable = $app->getTable('Article_contact');
+$projectTable = $app->getTable('Project');
+
 $rea = $realisationTable->all();
 
 $pages = $app->getTable('Page')->getPage('realisation');
 
 $siteTable = $app->getTable('Page')->getPage('Site');
 
-$projectTable = $app->getTable('Project');
 $projects = $projectTable->getProjectIMG();
 
 $form = new Form($pages);
 
 if(!empty($_POST)){
     $res = save($_POST['id'], "title", "content", '',$projectTable);
+    $res = save($_POST['id'], 'website_link','contact_by', '', $artContactTable, false, true);// IL TE RESTE CELUI LA A FAIRE
     $res = save($_POST['realisation'], 'contenu','titre', 'titre2',$realisationTable, true);
-    $res = save($_POST['realisation'], 'contenu','titre', 'titre2', $artContactTable);// IL TE RESTE CELUI LA A FAIRE
 
     if($res){
         header('Location: admin.php?page=reference.param');
@@ -35,7 +37,7 @@ if(!empty($_POST)){
 
 }
 
-function save($postTable, $field1, $field2, $field3, $uneTable, $real = false){
+function save($postTable, $field1, $field2, $field3, $uneTable, $real = false, $contact = false){
     $post = Array();
     foreach($postTable as $key=>$value) {
         $post[$key] = $value;
@@ -57,13 +59,23 @@ function save($postTable, $field1, $field2, $field3, $uneTable, $real = false){
     for ($i = 1; $i < count($tab); $i++){
         switch ($real){
             case false:
-                $uneTable->update(
-                    $i,
-                    [
-                        $field1 => $tab[$i][3],
-                        $field2 => $tab[$i][4],
-                    ]
-                );
+                if ($contact){
+                    $uneTable->update(
+                        $i,
+                        [
+                            $field1 => $tab[$i][1],
+                            $field2 => $tab[$i][2],
+                        ]
+                    );
+                }else{
+                    $uneTable->update(
+                        $i,
+                        [
+                            $field1 => $tab[$i][3],
+                            $field2 => $tab[$i][4],
+                        ]
+                    );
+                }
                 break;
             case true:
                 $uneTable->update(

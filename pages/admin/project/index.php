@@ -18,7 +18,6 @@
     </p>
 
     <?php foreach ($projects as $proj):?>
-        <?php $categoryTable = $projectTable->findWithCategory($proj->id); ?>
         <div class="my-card-container">
             <div class="top-of-my-card">
                 <?= $proj->title; ?>

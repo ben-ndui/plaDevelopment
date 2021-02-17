@@ -17,7 +17,6 @@
     </p>
 
     <?php foreach ($services as $service):?>
-        <?php $categoryTable = $servicesTable->findWithCategory($service->id); ?>
         <div class="my-card-container">
             <div class="top-of-my-card">
                 <?= $service->title; ?>

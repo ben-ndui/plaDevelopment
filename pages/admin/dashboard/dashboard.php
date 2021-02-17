@@ -11,8 +11,6 @@
     $totalServices = count($servicesTable);
     $totalPage = $totalServices + $totalProjects;
 
-    //var_dump($totalProjects);
-
 ?>
 
 <?php include ROOT . '/pages/templates/partials/headers/dashboard-header.php'; ?>
@@ -188,6 +186,17 @@
                     </div>
                     <div class="overviewCard-description">
                         <h3 class="overviewCard-title text-light">Modifier la <strong>Page Contacts</strong></h3>
+                    </div>
+                </div>
+            </a>
+
+            <a href="?page=profil.edit">
+                <div class="overviewCard">
+                    <div class="overviewCard-icon overviewCard-icon--calendar">
+                        <i class="far fa-calendar-check"></i>
+                    </div>
+                    <div class="overviewCard-description">
+                        <h3 class="overviewCard-title text-light">Modifier mon <strong>Profil</strong></h3>
                     </div>
                 </div>
             </a>

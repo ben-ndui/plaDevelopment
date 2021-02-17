@@ -17,9 +17,8 @@ class ProjectTable extends Table {
     public function last(){
 
         return $this->query("
-            SELECT project.id, project.title, project.content, category.title as category
+            SELECT *
             FROM project
-            LEFT JOIN category on category_id = category.id
             WHERE project.id = ?"
         );
 

@@ -106,8 +106,12 @@ h1, h2, h3, h4, h5 {
 }
 
 .my-header .header-nav-bar {
+    display: block;
     position: fixed;
     width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
     color: var(--text-color-theme);
     background: var(--my-white);
     /*box-shadow: 0 2px 5px 2px rgba(0, 0, 0, .2);/**/

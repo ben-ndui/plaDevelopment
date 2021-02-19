@@ -8,7 +8,7 @@
     <ul class="menu-coulissant">
         <li><a href="/" class="link link-nav-bar">ACCUEIL</a></li>
         <li><a href="/?page=references.index" class="link link-nav-bar">REFERENCES</a></li>
-        <li><a href="/?page=realisations.index" class="link link-nav-bar">REALISATIONS</a></li>
+        <li><a href="/?page=prestations.index" class="link link-nav-bar">PRESTATIONS</a></li>
         <li><a href="/?page=contact.index" class="link link-nav-bar">CONTACT</a></li>
         <li><a href="/?page=users.login.index" class="link link-nav-bar">CONNEXION</a></li>
     </ul>
@@ -18,7 +18,7 @@
         <ul>
             <li><a href="/" class="link link-nav-bar">ACCUEIL</a></li>
             <li><a href="/?page=references.index" class="link link-nav-bar">REFERENCES</a></li>
-            <li><a href="/?page=realisations.index" class="link link-nav-bar">REALISATION</a></li>
+            <li><a href="/?page=prestations.index" class="link link-nav-bar">PRESTATIONS</a></li>
             <li><a href="/?page=contact.index" class="link link-nav-bar">CONTACT</a></li>
             <li><a href="/?page=users.login.index" class="link link-nav-bar">CONNEXION</a></li>
         </ul>

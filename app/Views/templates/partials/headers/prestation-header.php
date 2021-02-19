@@ -1,9 +1,10 @@
 <?php
 
 $app = App::getInstance();
-$realisation = $app->getTable('Realisation')->findWithName('Réalisation');
+$prestation = $app->getTable('Prestation')->findWithName('Prestation');
 
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -16,14 +17,14 @@ $realisation = $app->getTable('Realisation')->findWithName('Réalisation');
     <meta name="Ben NDUI" content="">
     <link rel="stylesheet" href="css/standart/general_style.css">
     <link rel="stylesheet" href="css/mobile_style/mobile-standart.css">
-    <link rel="stylesheet" href="css/standart/references.css">
+    <link rel="stylesheet" href="css/standart/prestation.css">
 </head>
 <body>
 
 <div class="container">
 
     <header class="my-header header-pages header-reference">
-        <img src="<?= "assets/background/" . $realisation->home_img_url;?>">
+        <img src="<?=$prestation->home_img_url;?>">
         <?php include 'components/nav-widget.php'; ?>
 
     </header>

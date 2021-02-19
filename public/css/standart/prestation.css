@@ -1,0 +1,66 @@
+@charset "UTF-8";
+:root{
+    /* COULEUR ORANGE */
+    --globalOrange: #FF6100;
+    --globalOrangeRGB: rgba(255, 97, 0, 1) ;
+    --light-varianteOrange: #FFA46E;
+    --ultra-light-orange: #FFC4AA;
+
+    /* BLANC et BLANC CASSE */
+    --my-white: #FFFFFF;
+    --my-weight-white: #E4E4E4;
+
+    --background-color: #F6F6F6;
+
+    /* BLACK et GREY */
+    --my-black: #202020;
+    --my-grey: #EFEFEF;
+    --my-light-grey: #B1B1B1;
+
+    --text-color-theme : #FA5F02;
+}
+
+.container{
+    height: auto;
+    margin-top: 0;
+    padding-top: 5%;
+    overflow-x: hidden;
+}
+.my-header{
+    box-shadow: none;
+}
+.my-header .header-nav-bar{
+    position: fixed;
+    width: 100%;
+    left: 10%;
+    top: 0;
+    transform: translate(-10%, 0);
+}
+.title-bloc{
+    margin-left: 5%;
+    width: 60%;
+}
+.title-bloc .title-description{
+    margin-bottom: 5%;
+}
+/****************
+** bloc-card **
+ ***************/
+.blog-card {
+    width: 80%;
+    margin: 50px auto;
+    padding: 5%;
+}
+.blog-card img{
+    width: 100%;
+}
+@media screen and (max-width: 800px){
+    .blog-card{
+        width: 95%;
+        padding: 0;
+        height: 200px;
+    }
+    .blog-card img{
+        height: 100%;
+    }
+}

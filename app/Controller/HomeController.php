@@ -27,13 +27,6 @@ class HomeController extends AppController {
 
     }
 
-    public function reference(){
-        $realisation = $this->Realisation->findWithName('Réalisation');
-        $projects = $this->Project->getProjectIMG();
-
-        $this->render('references.index', compact('realisation', 'projects'));
-    }
-
     public function contact(){
         $this->render('contact.index');
     }
